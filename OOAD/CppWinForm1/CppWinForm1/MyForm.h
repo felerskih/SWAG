@@ -1,6 +1,15 @@
 #pragma once
 #include "RegisterUser.h"
-#include <map>;
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <istream>
+#include <map>
+#include <set>
+#include <msclr\marshal_cppstd.h> 
+using namespace msclr::interop;
+using namespace System::Runtime::InteropServices;
+using namespace std;
 namespace CppWinForm1 {
 
 	using namespace System;
@@ -21,6 +30,8 @@ namespace CppWinForm1 {
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
+			this->Location.X = 500;
+			this->Location.Y = 500;
 			//
 		}
 	public: 
@@ -37,12 +48,15 @@ namespace CppWinForm1 {
 		}
 	private: System::Windows::Forms::TextBox^  txtUser;
 	protected:
+		string * users = new string[100];
+		string * pass = new string[100];
 	private: System::Windows::Forms::TextBox^  txtPass;
 	private: System::Windows::Forms::Button^  btnLogIn;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Button^  btnRegister;
+	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
 
 	private:
 		/// <summary>
@@ -65,6 +79,7 @@ namespace CppWinForm1 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnRegister = (gcnew System::Windows::Forms::Button());
+			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -129,6 +144,10 @@ namespace CppWinForm1 {
 			this->btnRegister->UseVisualStyleBackColor = true;
 			this->btnRegister->Click += gcnew System::EventHandler(this, &MyForm::btnRegister_Click);
 			// 
+			// openFileDialog1
+			// 
+			this->openFileDialog1->FileName = L"C:\\Users\\gantenbeina\\Downloads\\test.txt";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -143,6 +162,7 @@ namespace CppWinForm1 {
 			this->Controls->Add(this->txtUser);
 			this->Name = L"MyForm";
 			this->Text = L"Log In: SWAG Systems";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -151,6 +171,7 @@ namespace CppWinForm1 {
 #pragma endregion
 	private: System::Void btnLogIn_Click(System::Object^  sender, System::EventArgs^  e) 
 	{
+		//string 
 		
 	}
 private: System::Void btnRegister_Click(System::Object^  sender, System::EventArgs^  e) 
@@ -159,6 +180,29 @@ private: System::Void btnRegister_Click(System::Object^  sender, System::EventAr
 	this->Hide();
 	regis->Show();
 
+}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+{
+	string file = marshal_as<string>(openFileDialog1->FileName);
+	fstream is;
+	string u, p;
+	is.open(file);
+	try
+	{
+		while (is)
+		{
+			for (int i = 0; i < 100; i++)
+			{
+				is >> users[i];
+				is >> pass[i];
+			}
+		}
+	}
+	catch (...)
+	{
+		MessageBox::Show("Bad Input File!");
+	}
+	is.close();
 }
 };
 }
