@@ -2,8 +2,8 @@ ManageMessages
 	CreateMessage()
 	{
 		instantiate message
-		Person receiver = Message.receiver
-		receiver.AddNewMessage(Message)
+		account receiver = receiver of the message
+		add new message to receiver's inbox
 	}
 
 ManageLogin
