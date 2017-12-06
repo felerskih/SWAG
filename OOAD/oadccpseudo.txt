@@ -1,23 +1,59 @@
 ManageMessages
 	CreateMessage()
 	{
-		new message{message text, message receiver, message sender);
-	}
-	PassMessage{Message)
-	{
+		instantiate message
 		Person receiver = Message.receiver
 		receiver.AddNewMessage(Message)
 	}
 
 ManageLogin
-	CreateAccount
-	ValidateLoginRequest
-
+	CreateAccount(username, password, type)
+	{
+		if username is in use
+			return false
+		write username + password + type to login file
+		return true
+	}
+	ValidateLoginRequest(username, password)
+	{
+		if username is not valid
+			return false
+		if username is in file
+			if password doesnt match
+				return false
+			if password matches
+				if user is gambler
+					go to gambler page
+					return true
+				if user is dealer
+					go to dealer page
+					return true
+				if user is manager
+					go to manager page
+					return true
+	}
 ManageSchedule
-	ViewSchredule
-	CreateSchedule
-	ModifySchedule
+	ViewSchedule()
+	{
+		show schedule panel
+	}
+	CreateSchedule()
+	{
+		instantiate new schedule
+	}
 
 ManageFunds
-	AddFunds
-	RemoveFunds
+	AddFunds(funds amount)
+	{
+		if ( bank funds - funds amount > 0 )
+			current funds += funds amount
+			return true
+		return false
+	}		
+	RemoveFunds(funds amount)
+	{
+		if ( current funds - funds amount > 0 )
+			current funds -= funds amount
+			return true
+		return false
+	}
