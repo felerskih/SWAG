@@ -136,12 +136,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DealerView.cpp" />
     <ClCompile Include="GamblerForm.cpp" />
     <ClCompile Include="ManagerForm.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="RegisterUser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DealerView.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="GamblerForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

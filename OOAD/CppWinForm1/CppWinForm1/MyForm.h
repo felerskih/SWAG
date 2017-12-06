@@ -1,5 +1,8 @@
 #pragma once
 #include "RegisterUser.h"
+#include "GamblerForm.h"
+#include "ManagerForm.h"
+#include "DealerView.h"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -50,6 +53,8 @@ namespace CppWinForm1 {
 	protected:
 		string * users = new string[100];
 		string * pass = new string[100];
+		int * typeUser = new int[100];
+		int size = 0;
 	private: System::Windows::Forms::TextBox^  txtPass;
 	private: System::Windows::Forms::Button^  btnLogIn;
 	private: System::Windows::Forms::Label^  label1;
@@ -94,8 +99,10 @@ namespace CppWinForm1 {
 			// 
 			this->txtPass->Location = System::Drawing::Point(108, 104);
 			this->txtPass->Name = L"txtPass";
+			this->txtPass->PasswordChar = '*';
 			this->txtPass->Size = System::Drawing::Size(107, 20);
 			this->txtPass->TabIndex = 1;
+			this->txtPass->UseSystemPasswordChar = true;
 			// 
 			// btnLogIn
 			// 
@@ -171,7 +178,37 @@ namespace CppWinForm1 {
 #pragma endregion
 	private: System::Void btnLogIn_Click(System::Object^  sender, System::EventArgs^  e) 
 	{
-		//string 
+		int j = 0;
+		while (marshal_as<string>(txtUser->Text) != users[j] && j < size)
+			j++;
+		if (marshal_as<string>(txtPass->Text) == pass[j])
+		{
+			int userType = typeUser[j];
+			if (userType == 0)
+			{
+				ManagerForm ^ man = gcnew ManagerForm();
+				this->Hide();
+				man->Show();
+			}
+			else if (userType == 1)
+			{
+				DealerView ^ deal = gcnew DealerView();
+				this->Hide();
+				deal->Show();
+			}
+			else if (userType == 2)
+			{
+				GamblerForm ^ gam = gcnew GamblerForm();
+				this->Hide();
+				gam->Show();
+			}
+			else
+				MessageBox::Show("Incorreassword");
+		}
+		else
+		{
+			MessageBox::Show("Incorrect Username/Password");
+		}
 		
 	}
 private: System::Void btnRegister_Click(System::Object^  sender, System::EventArgs^  e) 
@@ -191,11 +228,11 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 	{
 		while (is)
 		{
-			for (int i = 0; i < 100; i++)
-			{
-				is >> users[i];
-				is >> pass[i];
-			}
+			
+			is >> users[size];
+			is >> pass[size];
+			is >> typeUser[size];
+			size++;
 		}
 	}
 	catch (...)
