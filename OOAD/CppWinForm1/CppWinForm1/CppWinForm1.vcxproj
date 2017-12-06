@@ -160,6 +160,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DealerView.resx">
+      <DependentUpon>DealerView.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GamblerForm.resx">
       <DependentUpon>GamblerForm.h</DependentUpon>
     </EmbeddedResource>

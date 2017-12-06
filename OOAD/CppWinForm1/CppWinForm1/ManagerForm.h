@@ -34,7 +34,8 @@ namespace CppWinForm1 {
 				delete components;
 			}
 		}
-
+	private: System::Windows::Forms::Form ^ otherform;
+	private: System::Windows::Forms::Button^  btnLogOut;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -48,18 +49,39 @@ namespace CppWinForm1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->btnLogOut = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
+			// 
+			// btnLogOut
+			// 
+			this->btnLogOut->Location = System::Drawing::Point(269, 200);
+			this->btnLogOut->Name = L"btnLogOut";
+			this->btnLogOut->Size = System::Drawing::Size(75, 23);
+			this->btnLogOut->TabIndex = 7;
+			this->btnLogOut->Text = L"Log Out";
+			this->btnLogOut->UseVisualStyleBackColor = true;
+			this->btnLogOut->Click += gcnew System::EventHandler(this, &ManagerForm::btnLogOut_Click);
 			// 
 			// ManagerForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(612, 422);
+			this->Controls->Add(this->btnLogOut);
 			this->Name = L"ManagerForm";
 			this->Text = L"ManagerForm";
 			this->ResumeLayout(false);
 
 		}
+	public: ManagerForm(System::Windows::Forms::Form ^ frm1)
+	{
+		otherform = frm1;
+		InitializeComponent();
+	}
 #pragma endregion
+	private: System::Void btnLogOut_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Hide();
+		otherform->Show();
+	}
 	};
 }

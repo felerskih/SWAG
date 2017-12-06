@@ -41,8 +41,10 @@ namespace CppWinForm1 {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::TextBox^  textBox2;
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  btnLogOut;
 
+
+	private: System::Windows::Forms::Form ^ otherform;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -62,7 +64,7 @@ namespace CppWinForm1 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnLogOut = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -115,21 +117,22 @@ namespace CppWinForm1 {
 			this->textBox2->Size = System::Drawing::Size(100, 20);
 			this->textBox2->TabIndex = 5;
 			// 
-			// button1
+			// btnLogOut
 			// 
-			this->button1->Location = System::Drawing::Point(161, 156);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 6;
-			this->button1->Text = L"Log Out";
-			this->button1->UseVisualStyleBackColor = true;
+			this->btnLogOut->Location = System::Drawing::Point(161, 156);
+			this->btnLogOut->Name = L"btnLogOut";
+			this->btnLogOut->Size = System::Drawing::Size(75, 23);
+			this->btnLogOut->TabIndex = 6;
+			this->btnLogOut->Text = L"Log Out";
+			this->btnLogOut->UseVisualStyleBackColor = true;
+			this->btnLogOut->Click += gcnew System::EventHandler(this, &GamblerForm::btnLogOut_Click);
 			// 
 			// GamblerForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(424, 239);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnLogOut);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label4);
@@ -142,6 +145,17 @@ namespace CppWinForm1 {
 			this->PerformLayout();
 
 		}
+
+		public: GamblerForm(System::Windows::Forms::Form ^ frm1)
+		{
+			otherform = frm1;
+			InitializeComponent();
+		}
 #pragma endregion
-	};
+
+	private: System::Void btnLogOut_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Hide();
+		otherform->Show();
+	}
+};
 }

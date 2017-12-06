@@ -186,19 +186,19 @@ namespace CppWinForm1 {
 			int userType = typeUser[j];
 			if (userType == 0)
 			{
-				ManagerForm ^ man = gcnew ManagerForm();
+				ManagerForm ^ man = gcnew ManagerForm(this);
 				this->Hide();
 				man->Show();
 			}
 			else if (userType == 1)
 			{
-				DealerView ^ deal = gcnew DealerView();
+				DealerView ^ deal = gcnew DealerView(this);
 				this->Hide();
 				deal->Show();
 			}
 			else if (userType == 2)
 			{
-				GamblerForm ^ gam = gcnew GamblerForm();
+				GamblerForm ^ gam = gcnew GamblerForm(this);
 				this->Hide();
 				gam->Show();
 			}

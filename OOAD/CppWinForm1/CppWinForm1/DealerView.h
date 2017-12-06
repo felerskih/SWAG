@@ -35,6 +35,8 @@ namespace CppWinForm1 {
 			}
 		}
 
+	private: System::Windows::Forms::Form ^ otherform;
+	private: System::Windows::Forms::Button^  btnLogOut;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -48,12 +50,40 @@ namespace CppWinForm1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"DealerView";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->btnLogOut = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// btnLogOut
+			// 
+			this->btnLogOut->Location = System::Drawing::Point(105, 119);
+			this->btnLogOut->Name = L"btnLogOut";
+			this->btnLogOut->Size = System::Drawing::Size(75, 23);
+			this->btnLogOut->TabIndex = 7;
+			this->btnLogOut->Text = L"Log Out";
+			this->btnLogOut->UseVisualStyleBackColor = true;
+			this->btnLogOut->Click += gcnew System::EventHandler(this, &DealerView::btnLogOut_Click);
+			// 
+			// DealerView
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->btnLogOut);
+			this->Name = L"DealerView";
+			this->Text = L"DealerView";
+			this->ResumeLayout(false);
+
 		}
+	public: DealerView(System::Windows::Forms::Form ^ frm1)
+	{
+		otherform = frm1;
+		InitializeComponent();
+	}
 #pragma endregion
+	private: System::Void btnLogOut_Click(System::Object^  sender, System::EventArgs^  e) 
+	{
+		this->Hide();
+		otherform->Show();
+	}
 	};
 }
