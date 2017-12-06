@@ -1,0 +1,23 @@
+ManageMessages
+	CreateMessage()
+	{
+		new message{message text, message receiver, message sender);
+	}
+	PassMessage{Message)
+	{
+		Person receiver = Message.receiver
+		receiver.AddNewMessage(Message)
+	}
+
+ManageLogin
+	CreateAccount
+	ValidateLoginRequest
+
+ManageSchedule
+	ViewSchredule
+	CreateSchedule
+	ModifySchedule
+
+ManageFunds
+	AddFunds
+	RemoveFunds
