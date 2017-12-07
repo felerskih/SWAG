@@ -1,5 +1,6 @@
 #pragma once
 #include "User.h"
+
 class Gambler : public User
 {
 private:
