@@ -1,11 +1,12 @@
 #pragma once
-#include "User.h"
-#include <string>
-using namespace std;
+#include "Dealer.h"
 
+//STL container?
 class WorkSchedule
 {
 private:
+	Dealer * dealers;
 
 public:
+
 };
