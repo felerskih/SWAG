@@ -213,7 +213,7 @@ namespace CppWinForm1 {
 	}
 private: System::Void btnRegister_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-	RegisterUser ^ regis = gcnew RegisterUser(this);
+	RegisterUser ^ regis = gcnew RegisterUser(this, users);
 	this->Hide();
 	regis->Show();
 

@@ -39,12 +39,12 @@ namespace CppWinForm1 {
 
 	private: System::Windows::Forms::TextBox^  txtPassW;
 	protected:
-
+		string * users;
 
 	protected:
 
 	private: System::Windows::Forms::Label^  lblUserN;
-	private: System::Windows::Forms::Label^  lblPassW;
+
 	private: System::Windows::Forms::Label^  lblNewUser;
 	private: System::Windows::Forms::Label^  lblNewPass;
 	private: System::Windows::Forms::Button^  btnRegis;
@@ -70,7 +70,6 @@ namespace CppWinForm1 {
 			this->txtUserN = (gcnew System::Windows::Forms::TextBox());
 			this->txtPassW = (gcnew System::Windows::Forms::TextBox());
 			this->lblUserN = (gcnew System::Windows::Forms::Label());
-			this->lblPassW = (gcnew System::Windows::Forms::Label());
 			this->lblNewUser = (gcnew System::Windows::Forms::Label());
 			this->lblNewPass = (gcnew System::Windows::Forms::Label());
 			this->btnRegis = (gcnew System::Windows::Forms::Button());
@@ -83,6 +82,7 @@ namespace CppWinForm1 {
 			this->txtUserN->Name = L"txtUserN";
 			this->txtUserN->Size = System::Drawing::Size(227, 20);
 			this->txtUserN->TabIndex = 0;
+			this->txtUserN->TextChanged += gcnew System::EventHandler(this, &RegisterUser::txtUserN_TextChanged);
 			// 
 			// txtPassW
 			// 
@@ -99,15 +99,6 @@ namespace CppWinForm1 {
 			this->lblUserN->Size = System::Drawing::Size(30, 13);
 			this->lblUserN->TabIndex = 2;
 			this->lblUserN->Text = L"Valid";
-			// 
-			// lblPassW
-			// 
-			this->lblPassW->AutoSize = true;
-			this->lblPassW->Location = System::Drawing::Point(376, 92);
-			this->lblPassW->Name = L"lblPassW";
-			this->lblPassW->Size = System::Drawing::Size(30, 13);
-			this->lblPassW->TabIndex = 3;
-			this->lblPassW->Text = L"Valid";
 			// 
 			// lblNewUser
 			// 
@@ -155,7 +146,6 @@ namespace CppWinForm1 {
 			this->Controls->Add(this->btnRegis);
 			this->Controls->Add(this->lblNewPass);
 			this->Controls->Add(this->lblNewUser);
-			this->Controls->Add(this->lblPassW);
 			this->Controls->Add(this->lblUserN);
 			this->Controls->Add(this->txtPassW);
 			this->Controls->Add(this->txtUserN);
@@ -165,8 +155,9 @@ namespace CppWinForm1 {
 			this->PerformLayout();
 
 		}
-		public: RegisterUser(System::Windows::Forms::Form ^ frm1)
+		public: RegisterUser(System::Windows::Forms::Form ^ frm1, string * names)
 		{
+			users = names;
 			otherform = frm1;
 			InitializeComponent();
 		}
@@ -176,5 +167,13 @@ namespace CppWinForm1 {
 		this->Hide();
 		otherform->Show();
 	}
+private: System::Void txtUserN_TextChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	string test = txtUserN->Text->ToString;
+	for each (string var in users)
+	{
+
+	}
+}
 };
 }

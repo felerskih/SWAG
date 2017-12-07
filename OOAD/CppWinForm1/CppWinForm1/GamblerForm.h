@@ -1,5 +1,8 @@
 #pragma once
 
+#include <string>
+#include <iostream>
+using namespace std;
 namespace CppWinForm1 {
 
 	using namespace System;
@@ -35,16 +38,22 @@ namespace CppWinForm1 {
 			}
 		}
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  lblFunds;
 	protected:
-	private: System::Windows::Forms::Label^  label2;
+
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::TextBox^  txtAddFund;
+	private: System::Windows::Forms::TextBox^  txtWithdrawFund;
+
+
 	private: System::Windows::Forms::Button^  btnLogOut;
 
 
 	private: System::Windows::Forms::Form ^ otherform;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -59,12 +68,14 @@ namespace CppWinForm1 {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->lblFunds = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->txtAddFund = (gcnew System::Windows::Forms::TextBox());
+			this->txtWithdrawFund = (gcnew System::Windows::Forms::TextBox());
 			this->btnLogOut = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -76,14 +87,14 @@ namespace CppWinForm1 {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Current Funds:";
 			// 
-			// label2
+			// lblFunds
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(169, 26);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(34, 13);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"$0.00";
+			this->lblFunds->AutoSize = true;
+			this->lblFunds->Location = System::Drawing::Point(169, 26);
+			this->lblFunds->Name = L"lblFunds";
+			this->lblFunds->Size = System::Drawing::Size(28, 13);
+			this->lblFunds->TabIndex = 1;
+			this->lblFunds->Text = L"0.00";
 			// 
 			// label3
 			// 
@@ -103,19 +114,19 @@ namespace CppWinForm1 {
 			this->label4->TabIndex = 3;
 			this->label4->Text = L"Withdraw Funds:";
 			// 
-			// textBox1
+			// txtAddFund
 			// 
-			this->textBox1->Location = System::Drawing::Point(172, 53);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
-			this->textBox1->TabIndex = 4;
+			this->txtAddFund->Location = System::Drawing::Point(172, 53);
+			this->txtAddFund->Name = L"txtAddFund";
+			this->txtAddFund->Size = System::Drawing::Size(100, 20);
+			this->txtAddFund->TabIndex = 4;
 			// 
-			// textBox2
+			// txtWithdrawFund
 			// 
-			this->textBox2->Location = System::Drawing::Point(172, 94);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
-			this->textBox2->TabIndex = 5;
+			this->txtWithdrawFund->Location = System::Drawing::Point(172, 94);
+			this->txtWithdrawFund->Name = L"txtWithdrawFund";
+			this->txtWithdrawFund->Size = System::Drawing::Size(100, 20);
+			this->txtWithdrawFund->TabIndex = 5;
 			// 
 			// btnLogOut
 			// 
@@ -127,17 +138,39 @@ namespace CppWinForm1 {
 			this->btnLogOut->UseVisualStyleBackColor = true;
 			this->btnLogOut->Click += gcnew System::EventHandler(this, &GamblerForm::btnLogOut_Click);
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(295, 53);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(99, 23);
+			this->button1->TabIndex = 7;
+			this->button1->Text = L"Add Funds!";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &GamblerForm::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(295, 94);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 23);
+			this->button2->TabIndex = 8;
+			this->button2->Text = L"Withdraw Funds!";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &GamblerForm::button2_Click);
+			// 
 			// GamblerForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(424, 239);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnLogOut);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->txtWithdrawFund);
+			this->Controls->Add(this->txtAddFund);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
+			this->Controls->Add(this->lblFunds);
 			this->Controls->Add(this->label1);
 			this->Name = L"GamblerForm";
 			this->Text = L"GamblerForm";
@@ -157,5 +190,40 @@ namespace CppWinForm1 {
 		this->Hide();
 		otherform->Show();
 	}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	try
+	{
+		double f = Convert::ToDouble(txtAddFund->Text);
+		double g = Convert::ToDouble(lblFunds->Text);
+		double result = f + g;
+		//string dummy = result.ToString;
+		lblFunds->Text = Convert::ToString(result);
+
+	}
+	catch (...)
+	{
+		MessageBox::Show("Please enter a real dollar amount!");
+		txtAddFund->Clear();
+	}
+
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	try
+	{
+		double f = Convert::ToDouble(txtWithdrawFund->Text);
+		double g = Convert::ToDouble(lblFunds->Text);
+		double result = g - f;
+		//string dummy = result.ToString;
+		lblFunds->Text = Convert::ToString(result);
+
+	}
+	catch (...)
+	{
+		MessageBox::Show("Please enter a real dollar amount!");
+		txtAddFund->Clear();
+	}
+}
 };
 }
