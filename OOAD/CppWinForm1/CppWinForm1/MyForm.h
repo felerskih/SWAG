@@ -228,7 +228,6 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 	{
 		while (is)
 		{
-			
 			is >> users[size];
 			is >> pass[size];
 			is >> typeUser[size];

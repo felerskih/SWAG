@@ -32,7 +32,7 @@ Class CppWinForm1.ManagerForm: AutoLayout, AnsiClass, Class, Public, BeforeField
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CppWinForm1.RegisterUser: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, std.basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CppWinForm1.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form

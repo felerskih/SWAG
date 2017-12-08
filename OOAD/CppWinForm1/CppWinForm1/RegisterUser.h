@@ -1,5 +1,8 @@
-#pragma once
 
+#include <string>
+#include <iostream>
+
+using namespace std;
 namespace CppWinForm1 {
 
 	using namespace System;
@@ -36,12 +39,8 @@ namespace CppWinForm1 {
 		}
 	private: System::Windows::Forms::TextBox^  txtUserN;
 	protected:
-
+		string * users = new string[100];
 	private: System::Windows::Forms::TextBox^  txtPassW;
-	protected:
-		string * users;
-
-	protected:
 
 	private: System::Windows::Forms::Label^  lblUserN;
 
@@ -155,9 +154,9 @@ namespace CppWinForm1 {
 			this->PerformLayout();
 
 		}
-		public: RegisterUser(System::Windows::Forms::Form ^ frm1, string * names)
+		public: RegisterUser(System::Windows::Forms::Form ^ frm1, string * user)
 		{
-			users = names;
+			users = user;
 			otherform = frm1;
 			InitializeComponent();
 		}
@@ -169,10 +168,13 @@ namespace CppWinForm1 {
 	}
 private: System::Void txtUserN_TextChanged(System::Object^  sender, System::EventArgs^  e) 
 {
-	string test = txtUserN->Text->ToString;
-	for each (string var in users)
+	string test;
+	for (int i = 0; users->length(); i++)
 	{
-
+		if (users[i] == test)
+			lblUserN->Text = "Not Valid!";
+		else
+			lblUserN->Text = "Valid";
 	}
 }
 };
