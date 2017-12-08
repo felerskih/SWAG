@@ -1,1 +1,2 @@
 c:\users\felerskih\documents\visual studio 2015\Projects\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+J:\OOAD\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe.config
