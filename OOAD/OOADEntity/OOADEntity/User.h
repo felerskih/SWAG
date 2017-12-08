@@ -13,6 +13,4 @@ public:
 	User();
 
 	User(string u, string p);
-
-	bool LogIn(string u, string p);
 };

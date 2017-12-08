@@ -112,6 +112,9 @@
   <ItemGroup>
     <ClInclude Include="Dealer.h" />
     <ClInclude Include="Gambler.h" />
+    <ClInclude Include="ManageFunds.h" />
+    <ClInclude Include="ManageLogin.h" />
+    <ClInclude Include="ManageMessages.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="User.h" />
@@ -120,6 +123,9 @@
   <ItemGroup>
     <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Gambler.cpp" />
+    <ClCompile Include="ManageFunds.cpp" />
+    <ClCompile Include="ManageLogin.cpp" />
+    <ClCompile Include="ManageMessages.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="User.cpp" />

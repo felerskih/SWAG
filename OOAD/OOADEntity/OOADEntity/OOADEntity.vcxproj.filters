@@ -33,6 +33,15 @@
     <ClInclude Include="Manager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="ManageFunds.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ManageMessages.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ManageLogin.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="User.cpp">
@@ -51,6 +60,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageFunds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageMessages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageLogin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

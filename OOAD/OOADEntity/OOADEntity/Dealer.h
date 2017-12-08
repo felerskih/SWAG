@@ -14,8 +14,8 @@ public:
 
 	//2 + 2 is 4, minus is three quick maths - Andrew 12/7
 
-	//Possible to get rid of
-	bool ReceiveMessage(Message);
+	//Find username in file and load in corresponding messages
+	bool LoadMessages(Message);
 
 	//TODO
 	Message FlagGambler();
