@@ -8,13 +8,48 @@ namespace CasinoManagement
 {
     class Dealer : User
     {
-        private List<Message> messages;
+        //private List<Message> messages;
+
+        
         public Dealer(string u, string p) : base(u, p)
         {
 
         }
+        //Check if receiver is manager needed
+        public bool CreateMessage(string text, string receiver)
+        {
+            string line;
+            try
+            {
+                using (StreamReader sr = new StreamReader("filename"))
+                {
+                    line = sr.ReadLine();
+                    while (line != null && line != receiver)
+                    {
+                        line = sr.ReadLine();
+                    }
+                    if (line == receiver)
+                    {
+                        while ((line != ""))
+                        {
+                            line = sr.ReadLine();
+                        }//could be wrong with ""
+                        using (StreamWriter sw = new StreamWriter("filename"))
+                        {
+                            sw.WriteLine(text + " /" + username);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
-        public bool LoadMessages(Message[] m)
+        public bool LoadMessages()
         {
             string line;
             try
@@ -28,7 +63,11 @@ namespace CasinoManagement
                             while ((line = sr.ReadLine()) != "")
                                 //need to create message file format
                                 //messages.Insert()
-                                
+
+
+
+                            return true;//inside if but outside of inner while
+
                         }
                     }
                 }
@@ -38,10 +77,12 @@ namespace CasinoManagement
                 System.Console.Write("Could not open file.");
                 return false;
             }
-            return true;
+            return false;
+            
         }
 
-        public void AddFunds(float amt, Gambler g)
+        //Following two methods most likely not necessary
+        /*public void AddFunds(float amt, Gambler g)
         {
             g.AddFunds(amt);
         }
@@ -49,7 +90,7 @@ namespace CasinoManagement
         public void RemoveFunds(float amt, Gambler g)
         {
             g.RemoveFunds(amt);
-        }
+        }*/
 
         public WorkSchedule CheckSchedule()
         {

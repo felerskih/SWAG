@@ -1,0 +1,7 @@
+dealer1 M 1
+dealer2 T 2
+dealer3 F 3
+dealer4 R 1
+dealer5 W 2
+dealer6 S 3
+dealer7 U 1

@@ -27,7 +27,7 @@ namespace CasinoManagement
                         name = values[0];
                         for(int i = 1; i < values.Length; i += 2)
                         {
-                            shift = values[i] + values[i + 1];
+                            shift = " " + values[i] + " " + values[i + 1];
                         }
                     }
                 }

@@ -1,0 +1,9 @@
+manager1
+this is a dummy message /dealer1
+dummy message /dealer2
+wow /dealer3
+
+dealer1
+this dummy message /manager1
+you're a dummy /manager1
+wow /manager1
