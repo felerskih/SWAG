@@ -48,11 +48,10 @@ namespace CasinoManagement
             }
         }
 
-        //So I didn't do delete because you basically have to read the whole file 
-        //in and remove the line that is message and then re write to the file and I wanted to go home instead. 
-        //hope this helps!
+        //assumes message is in file
         public bool DeleteMessage(string text, string sender)
         {
+            string nullstring = null;
             string line;
             try
             {
@@ -60,42 +59,71 @@ namespace CasinoManagement
                 {
                     line = sr.ReadLine();
                     while (line != null && line != username)
-                        sr.ReadLine();
+                    {
+                        line = sr.ReadLine();
+                    }
                     if(line == username)
                     {
-
+                        line = sr.ReadLine();
+                        while (line != "")
+                        {
+                            string [] values = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (values[1] == text)
+                            {
+                                using (StreamWriter sw = new StreamWriter("filename"))
+                                {
+                                    sw.WriteLine(nullstring);
+                                }
+                                return true;
+                            }
+                            sr.ReadLine();
+                        }
                     }
 
                 }
             }
+            catch(Exception ex)
+            {
+                //placeholder until i figure out what i want to do
+            }
+            return false;
         }
-        public bool LoadMessages()
+
+        //returns error message in values[0]
+        public string[] LoadMessages()
         {
             string line;
-            char[] splitter = new char[] { '/' };
+            string[] values = new string[100];           
+            int i = 0;
+            values[i] = "";
             try
             {
                 using (StreamReader sr = new StreamReader("filename"))
                 {
-                    while ((line = sr.ReadLine()) != null)
+                    line = sr.ReadLine();
+                    while (line != null && line != username)
+                        line = sr.ReadLine();
+                    if (line == username)
                     {
-                        if (line == username)
+                        while (line != "")
                         {
-                            while ((line = sr.ReadLine()) != "")
-                                //fuck it i gave up. Literally the same line from WorkShcedule.cs but it doesn't work.
-                                string[] values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
-                            //messages.Insert()
+                            values[i] = line;
+                            i++;
+                            line = sr.ReadLine();
 
                         }
+
                     }
+                    else
+                        values[0] = "Could not find username";
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write("Could not open file.");
-                return false;
+                values[0] = "Could not open file";
             }
-            return true;
+            return values;
         }
 
         public WorkSchedule CreateSchedule(Dictionary<string, List<string>> s)

@@ -49,36 +49,81 @@ namespace CasinoManagement
             }
         }
 
-        public bool LoadMessages()
+        public string[] LoadMessages()
         {
             string line;
+            char[] splitter = new char[] { '/' };
+            string[] values = new string[100];
+            int i = 0;
+            values[i] = "";
             try
             {
                 using (StreamReader sr = new StreamReader("filename"))
                 {
-                    while ((line = sr.ReadLine()) != null)
+                    line = sr.ReadLine();
+                    while (line != null && line != username)
+                        line = sr.ReadLine();
+                    if (line == username)
                     {
-                        if(line == username)
+                        while (line != "")
                         {
-                            while ((line = sr.ReadLine()) != "")
-                                //need to create message file format
-                                //messages.Insert()
-
-
-
-                            return true;//inside if but outside of inner while
+                            values[i] = line;
+                            i++;
+                            line = sr.ReadLine();
 
                         }
+
                     }
+                    else
+                        values[0] = "Could not find username";
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write("Could not open file.");
-                return false;
+                values[0] = "Could not open file";
+            }
+            return values;
+        }
+
+        public bool DeleteMessage(string text, string sender)
+        {
+            string nullstring = null;
+            string line;
+            try
+            {
+                using (StringReader sr = new StringReader("filename"))
+                {
+                    line = sr.ReadLine();
+                    while (line != null && line != username)
+                    {
+                        line = sr.ReadLine();
+                    }
+                    if (line == username)
+                    {
+                        line = sr.ReadLine();
+                        while (line != "")
+                        {
+                            string[] values = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (values[1] == text)
+                            {
+                                using (StreamWriter sw = new StreamWriter("filename"))
+                                {
+                                    sw.WriteLine(nullstring);
+                                }
+                                return true;
+                            }
+                            sr.ReadLine();
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                //placeholder until i figure out what i want to do
             }
             return false;
-            
         }
 
         //Following two methods most likely not necessary
