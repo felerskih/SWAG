@@ -16,9 +16,11 @@ namespace CasinoManagement
         Form ret;
         Form message;
         Form schedule;
-        public DealerPage(Form frm, string u, string p)
+        public DealerPage(Form frm, User usr)
         {
+            /*
             d = new CasinoManagement.Dealer(u, p);
+            */
             ret = frm;
             message = new CasinoManagement.MessagePage(this);
             schedule = new CasinoManagement.SchedulePage(this, false);

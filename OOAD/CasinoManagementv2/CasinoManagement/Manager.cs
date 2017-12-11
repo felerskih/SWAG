@@ -13,7 +13,7 @@ namespace CasinoManagement
         //private List<Message> messages;
         
 
-        public Manager(string u, string p) : base(u, p)
+        public Manager(string u, string p, int t) : base(u, p, t)
         {
 
         }

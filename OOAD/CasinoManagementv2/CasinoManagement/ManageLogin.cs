@@ -10,6 +10,7 @@ namespace CasinoManagement
     {
         public User LogIn(string u, string p, string t, string f)
         {
+            /*
             User user = new User();
             if (t.Equals('0'))
             {
@@ -21,6 +22,8 @@ namespace CasinoManagement
             if (t.Equals('2'))
                 user = new Manager(u, p);
             return user;
+            */
+            return null;
         }
         
     }

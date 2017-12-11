@@ -135,7 +135,6 @@
             this.Controls.Add(this.lblFundsTxt);
             this.Name = "GamblerPage";
             this.Text = "GamblerPage";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GamblerPage_FormClosing);
             this.Load += new System.EventHandler(this.GamblerPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

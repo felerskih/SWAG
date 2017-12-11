@@ -12,12 +12,12 @@ namespace CasinoManagement
 {
     public partial class ManagerPage : Form
     {
-        Manager m;
+        //Manager m;
         Form ret;
         Form message, schedule, regis;
-        public ManagerPage(Form frm, string u, string p)
+        public ManagerPage(Form frm, User usr)
         {
-            m = new Manager(u, p);
+            //m = new Manager(u, p);
             ret = frm;
             InitializeComponent();
         }
@@ -38,6 +38,11 @@ namespace CasinoManagement
             message = new CasinoManagement.MessagePage(this);
             message.Show();
             this.Hide();
+        }
+
+        private void ManagerPage_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)

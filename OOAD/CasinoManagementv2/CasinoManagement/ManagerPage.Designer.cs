@@ -117,6 +117,7 @@
             this.Controls.Add(this.btnCreateAccount);
             this.Name = "ManagerPage";
             this.Text = "Manager Page";
+            this.Load += new System.EventHandler(this.ManagerPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

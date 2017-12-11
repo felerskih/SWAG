@@ -10,7 +10,7 @@ namespace CasinoManagement
     {
         private float funds = 0.0f;
 
-        public Gambler(string u, string p, float f) : base(u, p)
+        public Gambler(string u, string p, int t, float f) : base(u, p, t)
         {
             funds = f;
         }
