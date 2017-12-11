@@ -1,4 +1,2 @@
 henry pass 1
-
-
-andrew pass 0 1300
+henry pass 1andrew pass 0 800

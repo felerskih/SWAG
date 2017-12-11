@@ -54,13 +54,16 @@ namespace CasinoManagement
         {
             string line;
             string[] values;
-            using (StreamReader str = new StreamReader("users.txt"))
+            using (StreamReader str = new StreamReader("testUsers.txt"))
             {
                 line = str.ReadLine();
-                values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
-                if(values[0] == textBox1.Text)
+                while (line != null)
                 {
-                    lblValid 
+                    values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                    if (values[0] == textBox1.Text)
+                        lblValid.Text = "Not Valid";
+                    else
+                        lblValid.Text = "Valid";
                 }
             }
         }
