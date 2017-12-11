@@ -70,34 +70,44 @@ namespace CasinoManagement
         private void btnLogout_Click(object sender, EventArgs e)
         {
             string line;
-            List<string> lines = new List<string>();
+            string fileText ="";
+            string[] values = new string[4];
+            //List<string> lines = new List<string>();
             string file = "users.txt";
-            using (StreamReader str = new StreamReader(file))
+            try
             {
-                line = str.ReadLine();
-                while(line != null)
+                using (StreamReader str = new StreamReader(file))
                 {
-                    lines.Add(line);
                     line = str.ReadLine();
-                }
-                    
-            }
-            using (StreamWriter strW = new StreamWriter(file))
-            {
-
-                for (List<string>.Enumerator iter = lines.GetEnumerator(); iter.Current != lines.Last(); iter.MoveNext())
-                {
-                    if (iter.Current.Contains(g.getName()))
+                    fileText += line;
+                    values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                    while (line != null && values[0] != g.getName())
                     {
-                        lines.Remove(iter.Current);
-                        lines.Add(g.print() + 0 + g.GetFunds());
+                        fileText += "\n" + line;
+                        line = str.ReadLine();
+                        if (line != null)
+                            values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
                     }
+                    /*while(line != null)
+                    {
+                        fileText += "\n" + line;
+                        line = str.ReadLine();
+                    }
+                    if (line == null)
+                        fileText += "\n" + line;*/
                 }
-                for (List<string>.Enumerator iter = lines.GetEnumerator(); iter.Current != lines.Last(); iter.MoveNext())
-                {
-                    strW.WriteLine(iter.Current);
-                }
-                File.Replace("editUsers.txt", file, "backup.txt");
+                    if (values[0] == g.getName())
+                    {
+                        using (StreamWriter strW = new StreamWriter(file))
+                        {
+                            strW.Write(fileText);
+                            strW.WriteLine(values[0] + " " + values[1] + " " + values[2] + " " + g.GetFunds());
+                        }
+                    }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Exception is " + ex);
             }
                 
             CasinoManagement.LoginPage log = new LoginPage();

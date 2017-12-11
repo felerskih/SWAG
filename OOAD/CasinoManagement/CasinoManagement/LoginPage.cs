@@ -65,7 +65,7 @@ namespace CasinoManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show("You fucked up Henry " + ex);
+                MessageBox.Show("Exception: " + ex);
             }
         }
 

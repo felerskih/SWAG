@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CasinoManagement
 {
@@ -47,6 +48,21 @@ namespace CasinoManagement
             CasinoManagement.LoginPage log = new LoginPage();
             this.Close();
             log.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string line;
+            string[] values;
+            using (StreamReader str = new StreamReader("users.txt"))
+            {
+                line = str.ReadLine();
+                values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                if(values[0] == textBox1.Text)
+                {
+                    lblValid 
+                }
+            }
         }
     }
 }
