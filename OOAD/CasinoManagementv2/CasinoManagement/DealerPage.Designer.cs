@@ -104,6 +104,7 @@
             this.btnConfirmGive.TabIndex = 6;
             this.btnConfirmGive.Text = "Confirm";
             this.btnConfirmGive.UseVisualStyleBackColor = true;
+            this.btnConfirmGive.Click += new System.EventHandler(this.btnConfirmGive_Click);
             // 
             // btnFlag
             // 

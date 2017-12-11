@@ -52,3 +52,6 @@ J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb

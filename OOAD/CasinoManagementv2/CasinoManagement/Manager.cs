@@ -24,7 +24,7 @@ namespace CasinoManagement
             string line;
             try
             {
-                using (StreamReader sr = new StreamReader("filename"))
+                using (StreamReader sr = new StreamReader("DummyMessages.txt"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != receiver)
@@ -33,7 +33,7 @@ namespace CasinoManagement
                     {
                         while ((line != ""))
                             line = sr.ReadLine();
-                        using (StreamWriter sw = new StreamWriter("filename"))
+                        using (StreamWriter sw = new StreamWriter("DummyMessages.txt"))
                         {
                             sw.WriteLine(text + " /" + username);
                             return true;
@@ -55,7 +55,7 @@ namespace CasinoManagement
             string line;
             try
             {
-                using (StringReader sr = new StringReader("filename"))
+                using (StringReader sr = new StringReader("DummyMessages.txt"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != username)
@@ -70,7 +70,7 @@ namespace CasinoManagement
                             string [] values = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
                             if (values[1] == text)
                             {
-                                using (StreamWriter sw = new StreamWriter("filename"))
+                                using (StreamWriter sw = new StreamWriter("DummyMessages.txt"))
                                 {
                                     sw.WriteLine(nullstring);
                                 }
@@ -98,7 +98,7 @@ namespace CasinoManagement
             values[i] = "";
             try
             {
-                using (StreamReader sr = new StreamReader("filename"))
+                using (StreamReader sr = new StreamReader("DummyMessages.txt"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != username)
@@ -129,7 +129,7 @@ namespace CasinoManagement
         public WorkSchedule CreateSchedule(Dictionary<string, List<string>> s)
         {
             System.IO.File.WriteAllText("path", string.Empty);
-            using (StreamWriter sr = new StreamWriter("filename"))
+            using (StreamWriter sr = new StreamWriter("dummySchedule.txt"))
             {
                 foreach (KeyValuePair<string, List<string>> Entry in s)
                     sr.WriteLine(Entry.Key + " " + Entry.Value);

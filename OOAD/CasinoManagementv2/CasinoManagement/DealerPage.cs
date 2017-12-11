@@ -55,5 +55,10 @@ namespace CasinoManagement
         {
 
         }
+
+        private void btnConfirmGive_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
