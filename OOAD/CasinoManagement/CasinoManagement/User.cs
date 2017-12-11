@@ -11,7 +11,10 @@ namespace CasinoManagement
         protected string username;
         protected string password;
 
-        public User();
+        public User()
+        {
+
+        }
 
         public User(string u, string p)
         {

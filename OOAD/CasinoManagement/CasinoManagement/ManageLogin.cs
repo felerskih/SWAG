@@ -8,14 +8,17 @@ namespace CasinoManagement
 {
     class ManageLogin
     {
-        public User LogIn(string u, string p, int t, float f = 0)
+        public User LogIn(string u, string p, string t, string f)
         {
             User user = new User();
-            if (t == 0)
-                user = new Gambler(u, p, f); 
-            if (t == 1)
+            if (t.Equals('0'))
+            {
+                float amt = float.Parse(f);
+                user = new Gambler(u, p, amt);
+            } 
+            if (t.Equals('1'))
                 user = new Dealer(u, p);
-            if (t == 2)
+            if (t.Equals('2'))
                 user = new Manager(u, p);
             return user;
         }
