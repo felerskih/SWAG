@@ -16,3 +16,18 @@ J:\_Fall2017\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\C
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.exe
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.pdb
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.exe
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.pdb
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.pdb
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.csprojResolveAssemblyReference.cache
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.DealerPage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.GamblerPage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.LoginPage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.ManagerPage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.MessagePage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.Properties.Resources.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
+J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache

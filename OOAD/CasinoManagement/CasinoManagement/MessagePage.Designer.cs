@@ -44,6 +44,7 @@
             this.cboSendMessages.Name = "cboSendMessages";
             this.cboSendMessages.Size = new System.Drawing.Size(121, 21);
             this.cboSendMessages.TabIndex = 0;
+            this.cboSendMessages.SelectedIndexChanged += new System.EventHandler(this.cboSendMessages_SelectedIndexChanged);
             // 
             // cboRecieveMessages
             // 

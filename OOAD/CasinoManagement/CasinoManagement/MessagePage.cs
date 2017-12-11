@@ -30,5 +30,10 @@ namespace CasinoManagement
             ret.Show();
             this.Hide();
         }
+
+        private void cboSendMessages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

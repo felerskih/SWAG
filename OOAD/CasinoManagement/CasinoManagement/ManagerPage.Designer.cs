@@ -39,7 +39,7 @@
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.Location = new System.Drawing.Point(33, 37);
+            this.btnCreateAccount.Location = new System.Drawing.Point(236, 87);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(94, 23);
             this.btnCreateAccount.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // btnEditSchedule
             // 
-            this.btnEditSchedule.Location = new System.Drawing.Point(156, 36);
+            this.btnEditSchedule.Location = new System.Drawing.Point(236, 144);
             this.btnEditSchedule.Name = "btnEditSchedule";
             this.btnEditSchedule.Size = new System.Drawing.Size(88, 23);
             this.btnEditSchedule.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // btnViewMessages
             // 
-            this.btnViewMessages.Location = new System.Drawing.Point(156, 83);
+            this.btnViewMessages.Location = new System.Drawing.Point(236, 198);
             this.btnViewMessages.Name = "btnViewMessages";
             this.btnViewMessages.Size = new System.Drawing.Size(103, 23);
             this.btnViewMessages.TabIndex = 2;
@@ -70,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 127);
+            this.label1.Location = new System.Drawing.Point(60, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 13);
             this.label1.TabIndex = 3;
@@ -79,14 +79,14 @@
             // lstFlagGamblers
             // 
             this.lstFlagGamblers.FormattingEnabled = true;
-            this.lstFlagGamblers.Location = new System.Drawing.Point(33, 155);
+            this.lstFlagGamblers.Location = new System.Drawing.Point(33, 87);
             this.lstFlagGamblers.Name = "lstFlagGamblers";
             this.lstFlagGamblers.Size = new System.Drawing.Size(183, 134);
             this.lstFlagGamblers.TabIndex = 4;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(369, 304);
+            this.btnLogout.Location = new System.Drawing.Point(383, 280);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             // btnUnflag
             // 
-            this.btnUnflag.Location = new System.Drawing.Point(33, 304);
+            this.btnUnflag.Location = new System.Drawing.Point(33, 259);
             this.btnUnflag.Name = "btnUnflag";
             this.btnUnflag.Size = new System.Drawing.Size(75, 23);
             this.btnUnflag.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 393);
+            this.ClientSize = new System.Drawing.Size(510, 329);
             this.Controls.Add(this.btnUnflag);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lstFlagGamblers);
