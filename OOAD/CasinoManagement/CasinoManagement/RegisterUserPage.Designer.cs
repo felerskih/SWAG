@@ -37,10 +37,12 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.pnlManageRegis = new System.Windows.Forms.Panel();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnRegisManager = new System.Windows.Forms.Button();
             this.btnRegisDealer = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
+            this.pnlGamblerRegis = new System.Windows.Forms.Panel();
             this.pnlManageRegis.SuspendLayout();
+            this.pnlGamblerRegis.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -95,16 +97,16 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(80, 175);
+            this.btnRegister.Location = new System.Drawing.Point(65, 152);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.Size = new System.Drawing.Size(106, 23);
             this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "Register Gambler";
             this.btnRegister.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(192, 174);
+            this.btnCancel.Location = new System.Drawing.Point(3, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -117,15 +119,25 @@
             this.pnlManageRegis.Controls.Add(this.btnReturn);
             this.pnlManageRegis.Controls.Add(this.btnRegisManager);
             this.pnlManageRegis.Controls.Add(this.btnRegisDealer);
-            this.pnlManageRegis.Location = new System.Drawing.Point(27, 203);
+            this.pnlManageRegis.Location = new System.Drawing.Point(12, 181);
             this.pnlManageRegis.Name = "pnlManageRegis";
-            this.pnlManageRegis.Size = new System.Drawing.Size(331, 74);
+            this.pnlManageRegis.Size = new System.Drawing.Size(273, 74);
             this.pnlManageRegis.TabIndex = 8;
             this.pnlManageRegis.Visible = false;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(186, 32);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(75, 23);
+            this.btnReturn.TabIndex = 2;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // btnRegisManager
             // 
-            this.btnRegisManager.Location = new System.Drawing.Point(165, 15);
+            this.btnRegisManager.Location = new System.Drawing.Point(53, 32);
             this.btnRegisManager.Name = "btnRegisManager";
             this.btnRegisManager.Size = new System.Drawing.Size(103, 23);
             this.btnRegisManager.TabIndex = 1;
@@ -134,30 +146,28 @@
             // 
             // btnRegisDealer
             // 
-            this.btnRegisDealer.Location = new System.Drawing.Point(53, 15);
+            this.btnRegisDealer.Location = new System.Drawing.Point(53, 3);
             this.btnRegisDealer.Name = "btnRegisDealer";
             this.btnRegisDealer.Size = new System.Drawing.Size(92, 23);
             this.btnRegisDealer.TabIndex = 0;
             this.btnRegisDealer.Text = "Register Dealer";
             this.btnRegisDealer.UseVisualStyleBackColor = true;
             // 
-            // btnReturn
+            // pnlGamblerRegis
             // 
-            this.btnReturn.Location = new System.Drawing.Point(118, 44);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(75, 23);
-            this.btnReturn.TabIndex = 2;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            this.pnlGamblerRegis.Controls.Add(this.btnCancel);
+            this.pnlGamblerRegis.Location = new System.Drawing.Point(195, 140);
+            this.pnlGamblerRegis.Name = "pnlGamblerRegis";
+            this.pnlGamblerRegis.Size = new System.Drawing.Size(90, 45);
+            this.pnlGamblerRegis.TabIndex = 9;
             // 
             // RegisterUserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 336);
+            this.ClientSize = new System.Drawing.Size(341, 294);
+            this.Controls.Add(this.pnlGamblerRegis);
             this.Controls.Add(this.pnlManageRegis);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -169,6 +179,7 @@
             this.Text = "RegisterUserPage";
             this.Load += new System.EventHandler(this.RegisterUserPage_Load);
             this.pnlManageRegis.ResumeLayout(false);
+            this.pnlGamblerRegis.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Button btnRegisManager;
         private System.Windows.Forms.Button btnRegisDealer;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Panel pnlGamblerRegis;
     }
 }

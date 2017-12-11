@@ -23,7 +23,10 @@ namespace CasinoManagement
 
             InitializeComponent();
             if (isManager)
+            {
                 pnlManageRegis.Visible = true;
+                pnlGamblerRegis.Visible = false;
+            }
             ret = frm;
         }
 
