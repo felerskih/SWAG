@@ -49,3 +49,6 @@ J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
