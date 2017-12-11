@@ -59,11 +59,15 @@ namespace CasinoManagement
                 line = str.ReadLine();
                 while (line != null)
                 {
+<<<<<<< .mine
+                    
+=======
                     values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
                     if (values[0] == textBox1.Text)
                         lblValid.Text = "Not Valid";
                     else
                         lblValid.Text = "Valid";
+>>>>>>> .r37
                 }
             }
         }

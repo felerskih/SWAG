@@ -48,5 +48,10 @@ namespace CasinoManagement
             schedule.Show();
             this.Hide();
         }
+
+        private void DealerPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
