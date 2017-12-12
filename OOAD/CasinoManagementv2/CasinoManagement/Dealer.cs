@@ -21,7 +21,7 @@ namespace CasinoManagement
             string line;
             try
             {
-                using (StreamReader sr = new StreamReader("DummyMessages.txt"))
+                using (StreamReader sr = new StreamReader("filename"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != receiver)
@@ -34,7 +34,7 @@ namespace CasinoManagement
                         {
                             line = sr.ReadLine();
                         }//could be wrong with ""
-                        using (StreamWriter sw = new StreamWriter("DummyMessages.txt"))
+                        using (StreamWriter sw = new StreamWriter("filename"))
                         {
                             sw.WriteLine(text + " /" + username);
                             return true;
@@ -58,7 +58,7 @@ namespace CasinoManagement
             values[i] = "";
             try
             {
-                using (StreamReader sr = new StreamReader("DummyMessages.txt"))
+                using (StreamReader sr = new StreamReader("filename"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != username)
@@ -92,7 +92,7 @@ namespace CasinoManagement
             string line;
             try
             {
-                using (StringReader sr = new StringReader("DummyMessages.txt"))
+                using (StringReader sr = new StringReader("filename"))
                 {
                     line = sr.ReadLine();
                     while (line != null && line != username)
@@ -107,7 +107,7 @@ namespace CasinoManagement
                             string[] values = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
                             if (values[1] == text)
                             {
-                                using (StreamWriter sw = new StreamWriter("DummyMessages.txt"))
+                                using (StreamWriter sw = new StreamWriter("filename"))
                                 {
                                     sw.WriteLine(nullstring);
                                 }

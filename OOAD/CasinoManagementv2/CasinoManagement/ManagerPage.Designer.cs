@@ -32,7 +32,7 @@
             this.btnEditSchedule = new System.Windows.Forms.Button();
             this.btnViewMessages = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lstFlagGamblers = new System.Windows.Forms.ListBox();
+            this.listBoxGamblers = new System.Windows.Forms.ListBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUnflag = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -76,13 +76,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "List of Flagged Gamblers";
             // 
-            // lstFlagGamblers
+            // listBoxGamblers
             // 
-            this.lstFlagGamblers.FormattingEnabled = true;
-            this.lstFlagGamblers.Location = new System.Drawing.Point(33, 87);
-            this.lstFlagGamblers.Name = "lstFlagGamblers";
-            this.lstFlagGamblers.Size = new System.Drawing.Size(183, 134);
-            this.lstFlagGamblers.TabIndex = 4;
+            this.listBoxGamblers.FormattingEnabled = true;
+            this.listBoxGamblers.Location = new System.Drawing.Point(33, 87);
+            this.listBoxGamblers.Name = "listBoxGamblers";
+            this.listBoxGamblers.Size = new System.Drawing.Size(183, 134);
+            this.listBoxGamblers.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -102,6 +102,7 @@
             this.btnUnflag.TabIndex = 6;
             this.btnUnflag.Text = "Unflag";
             this.btnUnflag.UseVisualStyleBackColor = true;
+            this.btnUnflag.Click += new System.EventHandler(this.btnUnflag_Click);
             // 
             // ManagerPage
             // 
@@ -110,7 +111,7 @@
             this.ClientSize = new System.Drawing.Size(510, 329);
             this.Controls.Add(this.btnUnflag);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.lstFlagGamblers);
+            this.Controls.Add(this.listBoxGamblers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.btnEditSchedule);
@@ -129,7 +130,7 @@
         private System.Windows.Forms.Button btnEditSchedule;
         private System.Windows.Forms.Button btnViewMessages;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstFlagGamblers;
+        private System.Windows.Forms.ListBox listBoxGamblers;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnUnflag;
     }

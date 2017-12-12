@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CasinoManagement
 {
     public partial class DealerPage : Form
     {
         Dealer d;
-        Form ret;
+        LoginPage ret;
         Form message;
         Form schedule;
         public DealerPage(Form frm, User usr)
@@ -21,7 +22,7 @@ namespace CasinoManagement
             /*
             d = new CasinoManagement.Dealer(u, p);
             */
-            ret = frm;
+            ret = (LoginPage)frm;
             message = new CasinoManagement.MessagePage(this);
             schedule = new CasinoManagement.SchedulePage(this, false);
             InitializeComponent();
@@ -58,7 +59,61 @@ namespace CasinoManagement
 
         private void btnConfirmGive_Click(object sender, EventArgs e)
         {
+            try
+            {
+                float a = float.Parse(txtGiveFunds.Text);
+                bool validGambler = false;
+                for (int i = 0; i < ret.accountCount; i++)
+                {
+                    if (ret.users[i].getName() == txtGamblerName.Text)
+                    {
+                        validGambler = true;
+                        Gambler g = (Gambler)ret.users[i];
+                        g.AddFunds(a);
+                    }
+                }
+                if (!validGambler)
+                    MessageBox.Show("Error!", "Please enter a valid username!");
+            }
+            catch
+            {
+                MessageBox.Show("Error!", "Please enter a float!");
+            }
+        }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmTake_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float a = float.Parse(txtRemoveFunds.Text);
+                bool validGambler = false;
+                for (int i = 0; i < ret.accountCount; i++)
+                {
+                    if (ret.users[i].getName() == txtGamblerName.Text)
+                    {
+                        validGambler = true;
+                        Gambler g = (Gambler)ret.users[i];
+                        g.RemoveFunds(a);
+                    }
+                }
+                if (!validGambler)
+                    MessageBox.Show("Error!", "Please enter a valid username!");
+            }
+            catch
+            {
+                MessageBox.Show("Error!", "Please enter a float!");
+            }
+        }
+
+        private void btnFlag_Click(object sender, EventArgs e)
+        {
+            //Gambler g;
+            //g.gamblerList.Add(listBoxGamblers.SelectedIndex.ToString());
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxGamblers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,15 +41,17 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.txtGiveFunds = new System.Windows.Forms.TextBox();
             this.txtRemoveFunds = new System.Windows.Forms.TextBox();
+            this.txtGamblerName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxGamblers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 108);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(229, 186);
-            this.listBox1.TabIndex = 0;
+            this.listBoxGamblers.FormattingEnabled = true;
+            this.listBoxGamblers.Location = new System.Drawing.Point(12, 108);
+            this.listBoxGamblers.Name = "listBoxGamblers";
+            this.listBoxGamblers.Size = new System.Drawing.Size(229, 186);
+            this.listBoxGamblers.TabIndex = 0;
             // 
             // label1
             // 
@@ -63,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 108);
+            this.label2.Location = new System.Drawing.Point(290, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 147);
+            this.label3.Location = new System.Drawing.Point(290, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 3;
@@ -95,6 +97,7 @@
             this.btnConfirmTake.TabIndex = 5;
             this.btnConfirmTake.Text = "Confirm";
             this.btnConfirmTake.UseVisualStyleBackColor = true;
+            this.btnConfirmTake.Click += new System.EventHandler(this.btnConfirmTake_Click);
             // 
             // btnConfirmGive
             // 
@@ -114,6 +117,7 @@
             this.btnFlag.TabIndex = 7;
             this.btnFlag.Text = "Flag";
             this.btnFlag.UseVisualStyleBackColor = true;
+            this.btnFlag.Click += new System.EventHandler(this.btnFlag_Click);
             // 
             // btnViewSchedule
             // 
@@ -159,11 +163,30 @@
             this.txtRemoveFunds.Size = new System.Drawing.Size(100, 20);
             this.txtRemoveFunds.TabIndex = 12;
             // 
+            // txtGamblerName
+            // 
+            this.txtGamblerName.Location = new System.Drawing.Point(381, 76);
+            this.txtGamblerName.Name = "txtGamblerName";
+            this.txtGamblerName.Size = new System.Drawing.Size(100, 20);
+            this.txtGamblerName.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(290, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Gambler Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // DealerPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 399);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtGamblerName);
             this.Controls.Add(this.txtRemoveFunds);
             this.Controls.Add(this.txtGiveFunds);
             this.Controls.Add(this.btnLogout);
@@ -176,7 +199,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxGamblers);
             this.Name = "DealerPage";
             this.Text = "DealerPage";
             this.Load += new System.EventHandler(this.DealerPage_Load);
@@ -187,7 +210,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxGamblers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -200,5 +223,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TextBox txtGiveFunds;
         private System.Windows.Forms.TextBox txtRemoveFunds;
+        private System.Windows.Forms.TextBox txtGamblerName;
+        private System.Windows.Forms.Label label5;
     }
 }

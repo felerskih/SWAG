@@ -8,6 +8,7 @@ namespace CasinoManagement
 {
     class Gambler : User
     {
+        public List<string> gamblerList = new List<string>();
         private float funds = 0.0f;
 
         public Gambler(string u, string p, int t, float f) : base(u, p, t)

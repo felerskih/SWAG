@@ -45,6 +45,12 @@ namespace CasinoManagement
             
         }
 
+        private void btnUnflag_Click(object sender, EventArgs e)
+        {
+            //Gambler g;
+            //g.gamblerList.Remove(listBoxGamblers.SelectedIndex.ToString());
+        }
+
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             regis = new CasinoManagement.RegisterUserPage(this, true);

@@ -49,9 +49,46 @@ J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
 J:\_Fall2017\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.DealerPage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.GamblerPage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.LoginPage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.ManagerPage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.MessagePage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.Properties.Resources.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
+C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
 C:\Users\hoertert\Desktop\New folder\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
-J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
-J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
-J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.pdb
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csprojResolveAssemblyReference.cache
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.DealerPage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.GamblerPage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.LoginPage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.ManagerPage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.MessagePage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.Properties.Resources.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
+C:\Users\hoertert\Desktop\New folder (2)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.pdb
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csprojResolveAssemblyReference.cache
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.DealerPage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.GamblerPage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.LoginPage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.ManagerPage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.MessagePage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.Properties.Resources.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
+C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
