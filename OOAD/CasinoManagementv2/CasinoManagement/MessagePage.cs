@@ -38,6 +38,19 @@ namespace CasinoManagement
                 d = (Dealer)user;
                 messages = d.LoadMessages();
             }
+            if (messages != null)
+            {
+                string[] values;
+                for (int i = 0; i < messages.Length; i++)
+                {
+                    values = messages[i].Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                    cboRecieveMessages.Items.Add(values[1]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("There was an error loading messages.");
+            }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -54,7 +67,7 @@ namespace CasinoManagement
         private void cboRecieveMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] values;
-            for(int i = 0; i < messages.Length; i++)
+            for (int i = 0; i < messages.Length; i++)
             {
                 values = messages[i].Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
                 if (values[1] == cboRecieveMessages.Text)

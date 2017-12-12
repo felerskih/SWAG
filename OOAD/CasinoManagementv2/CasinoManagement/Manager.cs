@@ -112,7 +112,7 @@ namespace CasinoManagement
                             line = sr.ReadLine();
 
                         }
-
+                        return values;
                     }
                     else
                         values[0] = "Could not find username";
@@ -121,9 +121,8 @@ namespace CasinoManagement
             catch (Exception ex)
             {
                 System.Console.Write("Could not open file.");
-                values[0] = "Could not open file";
             }
-            return values;
+            return null;
         }
 
         public WorkSchedule CreateSchedule(Dictionary<string, List<string>> s)
