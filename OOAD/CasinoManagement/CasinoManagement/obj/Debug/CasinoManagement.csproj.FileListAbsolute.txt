@@ -31,3 +31,18 @@ J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\Casino
 J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
 J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
 J:\Y3\biggusdickus\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.exe
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.pdb
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.csprojResolveAssemblyReference.cache
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.DealerPage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.GamblerPage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.LoginPage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.ManagerPage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.MessagePage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.Properties.Resources.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.exe
+C:\Users\gantenbeina\Desktop\New folder\trunk\OOAD\CasinoManagement\CasinoManagement\bin\Debug\CasinoManagement.pdb

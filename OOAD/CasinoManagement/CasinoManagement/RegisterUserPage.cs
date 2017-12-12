@@ -52,24 +52,50 @@ namespace CasinoManagement
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
             string line;
             string[] values;
-            using (StreamReader str = new StreamReader("testUsers.txt"))
+            bool valid = false;
+            using (StreamReader str = new StreamReader("users.txt"))
             {
                 line = str.ReadLine();
-                while (line != null)
+                while (line != null && !valid)
                 {
-<<<<<<< .mine
-                    
-=======
+                    values = line.Split(' ');
                     values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
                     if (values[0] == textBox1.Text)
-                        lblValid.Text = "Not Valid";
-                    else
-                        lblValid.Text = "Valid";
->>>>>>> .r37
+                        valid = true;
+                    line = str.ReadLine();
                 }
+                if (line != "" && valid)
+                    MessageBox.Show("Invalid Username! Username already exists!");
             }
+
+            if (textBox1.Text != "")
+            {
+                if (textBox2.Text != "")
+                {
+                    //Gambler newGam = new Gambler(textBox1.Text, textBox2.Text);
+                    if (!valid)
+                    {
+                        StreamWriter str = File.AppendText("users.txt");
+                        str.WriteLine("\n" + textBox1.Text + " " + textBox2.Text + " " + 0 + " " + "0.0");
+                        str.Close();
+                        LoginPage log = new LoginPage();
+                        log.Show();
+                        this.Close();
+                    }
+
+                }
+                else
+                    MessageBox.Show("Please enter a password!");
+            }
+            else
+                MessageBox.Show("Please enter a username!");
         }
     }
 }
