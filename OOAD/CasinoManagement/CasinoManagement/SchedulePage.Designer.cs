@@ -83,6 +83,7 @@
             this.btnRemoveDealer = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pnlManageDealers = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabSunday.SuspendLayout();
             this.tabMonday.SuspendLayout();
@@ -298,6 +299,7 @@
             this.listBoxT2.FormattingEnabled = true;
             this.listBoxT2.Location = new System.Drawing.Point(151, 96);
             this.listBoxT2.Name = "listBoxT2";
+            this.listBoxT2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxT2.Size = new System.Drawing.Size(120, 95);
             this.listBoxT2.TabIndex = 7;
             // 
@@ -581,6 +583,7 @@
             this.btnAddDealer.TabIndex = 12;
             this.btnAddDealer.Text = "Add Dealer";
             this.btnAddDealer.UseVisualStyleBackColor = true;
+            this.btnAddDealer.Click += new System.EventHandler(this.btnAddDealer_Click);
             // 
             // cboDealerSelect
             // 
@@ -599,6 +602,7 @@
             this.btnRemoveDealer.TabIndex = 14;
             this.btnRemoveDealer.Text = "Remove Dealer";
             this.btnRemoveDealer.UseVisualStyleBackColor = true;
+            this.btnRemoveDealer.Click += new System.EventHandler(this.btnRemoveDealer_Click);
             // 
             // btnReturn
             // 
@@ -612,6 +616,7 @@
             // 
             // pnlManageDealers
             // 
+            this.pnlManageDealers.Controls.Add(this.comboBox1);
             this.pnlManageDealers.Controls.Add(this.btnAddDealer);
             this.pnlManageDealers.Controls.Add(this.cboDealerSelect);
             this.pnlManageDealers.Controls.Add(this.btnRemoveDealer);
@@ -620,6 +625,37 @@
             this.pnlManageDealers.Size = new System.Drawing.Size(266, 100);
             this.pnlManageDealers.TabIndex = 16;
             this.pnlManageDealers.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sunday 1st Shift",
+            "Sunday 2nd Shift",
+            "Sunday 3rd Shift",
+            "Monday 1st Shift",
+            "Monday 2nd Shift",
+            "Monday 3rd Shift",
+            "Tuesday 1st Shift",
+            "Tuesday 2nd Shift",
+            "Tuesday 3rd Shift",
+            "Wednesday 1st Shift",
+            "Wednesday 2nd Shift",
+            "Wednesday 3rd Shift",
+            "Thursday 1st Shift",
+            "Thursday 2nd Shift",
+            "Thursday 3rd Shift",
+            "Friday 1st Shift",
+            "Friday 2nd Shift",
+            "Friday 3rd Shift",
+            "Saturday 1st Shift",
+            "Saturday 2nd Shift",
+            "Saturday 3rd Shift"});
+            this.comboBox1.Location = new System.Drawing.Point(115, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 15;
             // 
             // SchedulePage
             // 
@@ -709,5 +745,6 @@
         private System.Windows.Forms.Button btnRemoveDealer;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel pnlManageDealers;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
