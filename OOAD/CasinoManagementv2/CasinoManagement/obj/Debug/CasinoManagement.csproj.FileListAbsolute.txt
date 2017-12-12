@@ -92,3 +92,6 @@ C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj
 C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.RegisterUserPage.resources
 C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.SchedulePage.resources
 C:\Users\hoertert\Desktop\New folder (3)\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.csproj.GenerateResource.Cache
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\bin\Debug\CasinoManagement.exe.config
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.exe
+J:\OOAD\trunk\OOAD\CasinoManagementv2\CasinoManagement\obj\Debug\CasinoManagement.pdb

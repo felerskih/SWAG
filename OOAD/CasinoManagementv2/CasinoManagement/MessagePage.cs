@@ -13,16 +13,23 @@ namespace CasinoManagement
     public partial class MessagePage : Form
     {
         Form ret;
+        User user;
 
-        public MessagePage(Form frm)
+        public MessagePage(Form frm, User u)
         {
+            user = u;
             ret = frm;
             InitializeComponent();
         }
 
         private void MessagePage_Load(object sender, EventArgs e)
         {
-                
+            int type = user.getType();
+            if(type == 0)
+            {
+                Manager m = (Manager)user;
+                m.LoadMessages();
+            }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

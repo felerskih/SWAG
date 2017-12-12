@@ -12,12 +12,12 @@ namespace CasinoManagement
 {
     public partial class ManagerPage : Form
     {
-        //Manager m;
+        Manager m;
         Form ret;
         Form message, schedule, regis;
         public ManagerPage(Form frm, User usr)
         {
-            //m = new Manager(u, p);
+            m = (Manager)usr;
             ret = frm;
             InitializeComponent();
         }
@@ -28,14 +28,14 @@ namespace CasinoManagement
 
         private void btnEditSchedule_Click(object sender, EventArgs e)
         {
-            schedule = new CasinoManagement.SchedulePage(this, true);
+            schedule = new SchedulePage(this, true);
             schedule.Show();
             this.Hide();
         }
 
         private void btnViewMessages_Click(object sender, EventArgs e)
         {
-            message = new CasinoManagement.MessagePage(this);
+            message = new CasinoManagement.MessagePage(this, m);
             message.Show();
             this.Hide();
         }
