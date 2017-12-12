@@ -147,5 +147,10 @@ namespace CasinoManagement
             
 
         }
+
+        private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
     }
 }
