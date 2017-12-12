@@ -19,11 +19,10 @@ namespace CasinoManagement
         Form schedule;
         public DealerPage(Form frm, User usr)
         {
-            /*
-            d = new CasinoManagement.Dealer(u, p);
-            */
+
+            d = (Dealer)usr;
             ret = (LoginPage)frm;
-            message = new CasinoManagement.MessagePage(this);
+            message = new CasinoManagement.MessagePage(this, d);
             schedule = new CasinoManagement.SchedulePage(this, false);
             InitializeComponent();
         }

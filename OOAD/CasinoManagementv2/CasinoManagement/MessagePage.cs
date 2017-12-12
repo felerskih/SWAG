@@ -14,6 +14,9 @@ namespace CasinoManagement
     {
         Form ret;
         User user;
+        Manager m;
+        Dealer d;
+        string[] messages;
 
         public MessagePage(Form frm, User u)
         {
@@ -27,8 +30,13 @@ namespace CasinoManagement
             int type = user.getType();
             if(type == 0)
             {
-                Manager m = (Manager)user;
-                m.LoadMessages();
+                m = (Manager)user;
+                messages = m.LoadMessages();
+            }
+            else
+            {
+                d = (Dealer)user;
+                messages = d.LoadMessages();
             }
         }
 
@@ -41,6 +49,17 @@ namespace CasinoManagement
         private void cboSendMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboRecieveMessages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] values;
+            for(int i = 0; i < messages.Length; i++)
+            {
+                values = messages[i].Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                if (values[1] == cboRecieveMessages.Text)
+                    txtRecieveMessage.AppendText(values[0]);
+            }
         }
     }
 }
