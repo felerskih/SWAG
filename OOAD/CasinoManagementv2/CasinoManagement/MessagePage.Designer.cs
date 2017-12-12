@@ -33,8 +33,8 @@
             this.txtRecieveMessage = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboRecieveMessages
@@ -83,29 +83,29 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtName.Location = new System.Drawing.Point(48, 64);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(121, 20);
+            this.txtName.TabIndex = 6;
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.Location = new System.Drawing.Point(270, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(270, 202);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // MessagePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 357);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnSendMessage);
             this.Controls.Add(this.txtRecieveMessage);
@@ -113,6 +113,7 @@
             this.Controls.Add(this.cboRecieveMessages);
             this.Name = "MessagePage";
             this.Text = "MessagePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MessagePage_FormClosed);
             this.Load += new System.EventHandler(this.MessagePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,7 +126,7 @@
         private System.Windows.Forms.TextBox txtRecieveMessage;
         private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

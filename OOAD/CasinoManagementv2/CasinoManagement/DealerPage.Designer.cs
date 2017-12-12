@@ -202,6 +202,7 @@
             this.Controls.Add(this.listBoxGamblers);
             this.Name = "DealerPage";
             this.Text = "DealerPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DealerPage_FormClosed);
             this.Load += new System.EventHandler(this.DealerPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

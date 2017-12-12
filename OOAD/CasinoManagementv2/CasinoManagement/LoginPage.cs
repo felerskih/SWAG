@@ -150,7 +150,34 @@ namespace CasinoManagement
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            string[] lines = new string[100];
+            int numLines = 0;
+            string[] values;
+            try
+            {
+                using (StreamReader sr = new StreamReader("users.txt"))
+                {
+                    while ((lines[numLines] = sr.ReadLine()) != null)
+                        numLines++;
+                }
+                using (StreamWriter sw = new StreamWriter("users.txt"))
+                {
+                    for(int i = 0; i < numLines-1; i++)
+                    {
+                        //values = lines[i].Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+                        if (users[i].getType() == 0)
+                        {
+                            Gambler g = (Gambler)users[i];
+                            lines[i] = users[i].getName() + " " + users[i].getPass() + " " + users[i].getType() + " " + g.GetFunds();
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            Application.Exit();
         }
     }
 }

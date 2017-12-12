@@ -118,6 +118,7 @@
             this.Controls.Add(this.btnCreateAccount);
             this.Name = "ManagerPage";
             this.Text = "Manager Page";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManagerPage_FormClosed);
             this.Load += new System.EventHandler(this.ManagerPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

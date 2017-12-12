@@ -74,5 +74,11 @@ namespace CasinoManagement
                     txtRecieveMessage.AppendText(values[0]);
             }
         }
+
+        private void MessagePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ret.Show();
+            this.Hide();
+        }
     }
 }

@@ -114,5 +114,11 @@ namespace CasinoManagement
             //Gambler g;
             //g.gamblerList.Add(listBoxGamblers.SelectedIndex.ToString());
         }
+
+        private void DealerPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ret.Show();
+            this.Hide();
+        }
     }
 }

@@ -68,40 +68,14 @@ namespace CasinoManagement
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            string line;
-            List<string> lines = new List<string>();
-            string file = "users.txt";
-            using (StreamReader str = new StreamReader(file))
-            {
-                line = str.ReadLine();
-                while(line != null)
-                {
-                    lines.Add(line);
-                    line = str.ReadLine();
-                }
-                    
-            }
-            using (StreamWriter strW = new StreamWriter(file))
-            {
-
-                for (List<string>.Enumerator iter = lines.GetEnumerator(); iter.Current != lines.Last(); iter.MoveNext())
-                {
-                    if (iter.Current.Contains(g.getName()))
-                    {
-                        lines.Remove(iter.Current);
-                        lines.Add(g.print() + 0 + g.GetFunds());
-                    }
-                }
-                for (List<string>.Enumerator iter = lines.GetEnumerator(); iter.Current != lines.Last(); iter.MoveNext())
-                {
-                    strW.WriteLine(iter.Current);
-                }
-                File.Replace("editUsers.txt", file, "backup.txt");
-            }
-                
-            CasinoManagement.LoginPage log = new LoginPage();
             this.Close();
-            log.Show();
+            ret.Show();
+        }
+
+        private void GamblerPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            ret.Show();
         }
     }
 }
