@@ -33,63 +33,57 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxU3 = new System.Windows.Forms.ListBox();
+            this.listBoxU2 = new System.Windows.Forms.ListBox();
+            this.listBoxU1 = new System.Windows.Forms.ListBox();
             this.tabMonday = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.listBoxM3 = new System.Windows.Forms.ListBox();
+            this.listBoxM2 = new System.Windows.Forms.ListBox();
+            this.listBoxM1 = new System.Windows.Forms.ListBox();
             this.tabTuesday = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox7 = new System.Windows.Forms.ListBox();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.listBox9 = new System.Windows.Forms.ListBox();
+            this.listBoxT3 = new System.Windows.Forms.ListBox();
+            this.listBoxT2 = new System.Windows.Forms.ListBox();
+            this.listBoxT1 = new System.Windows.Forms.ListBox();
             this.tabWednesday = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.listBox10 = new System.Windows.Forms.ListBox();
-            this.listBox11 = new System.Windows.Forms.ListBox();
-            this.listBox12 = new System.Windows.Forms.ListBox();
+            this.listBoxW3 = new System.Windows.Forms.ListBox();
+            this.listBoxW2 = new System.Windows.Forms.ListBox();
+            this.listBoxW1 = new System.Windows.Forms.ListBox();
             this.tabThursday = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.listBox13 = new System.Windows.Forms.ListBox();
-            this.listBox14 = new System.Windows.Forms.ListBox();
-            this.listBox15 = new System.Windows.Forms.ListBox();
+            this.listBoxR3 = new System.Windows.Forms.ListBox();
+            this.listBoxR2 = new System.Windows.Forms.ListBox();
+            this.listBoxR1 = new System.Windows.Forms.ListBox();
             this.tabFriday = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.listBox16 = new System.Windows.Forms.ListBox();
-            this.listBox17 = new System.Windows.Forms.ListBox();
-            this.listBox18 = new System.Windows.Forms.ListBox();
+            this.listBoxF3 = new System.Windows.Forms.ListBox();
+            this.listBoxF2 = new System.Windows.Forms.ListBox();
+            this.listBoxF1 = new System.Windows.Forms.ListBox();
             this.tabSaturday = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.listBox19 = new System.Windows.Forms.ListBox();
-            this.listBox20 = new System.Windows.Forms.ListBox();
-            this.listBox21 = new System.Windows.Forms.ListBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.listBox22 = new System.Windows.Forms.ListBox();
-            this.listBox23 = new System.Windows.Forms.ListBox();
-            this.listBox24 = new System.Windows.Forms.ListBox();
+            this.listBoxS3 = new System.Windows.Forms.ListBox();
+            this.listBoxS2 = new System.Windows.Forms.ListBox();
+            this.listBoxS1 = new System.Windows.Forms.ListBox();
             this.btnAddDealer = new System.Windows.Forms.Button();
             this.cboDealerSelect = new System.Windows.Forms.ComboBox();
             this.btnRemoveDealer = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pnlManageDealers = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabSunday.SuspendLayout();
             this.tabMonday.SuspendLayout();
@@ -98,7 +92,6 @@
             this.tabThursday.SuspendLayout();
             this.tabFriday.SuspendLayout();
             this.tabSaturday.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.pnlManageDealers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +104,6 @@
             this.tabControl1.Controls.Add(this.tabThursday);
             this.tabControl1.Controls.Add(this.tabFriday);
             this.tabControl1.Controls.Add(this.tabSaturday);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -123,9 +115,9 @@
             this.tabSunday.Controls.Add(this.label3);
             this.tabSunday.Controls.Add(this.label2);
             this.tabSunday.Controls.Add(this.label1);
-            this.tabSunday.Controls.Add(this.listBox3);
-            this.tabSunday.Controls.Add(this.listBox2);
-            this.tabSunday.Controls.Add(this.listBox1);
+            this.tabSunday.Controls.Add(this.listBoxU3);
+            this.tabSunday.Controls.Add(this.listBoxU2);
+            this.tabSunday.Controls.Add(this.listBoxU1);
             this.tabSunday.Location = new System.Drawing.Point(4, 22);
             this.tabSunday.Name = "tabSunday";
             this.tabSunday.Padding = new System.Windows.Forms.Padding(3);
@@ -161,38 +153,38 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox3
+            // listBoxU3
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(278, 96);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(120, 95);
-            this.listBox3.TabIndex = 8;
+            this.listBoxU3.FormattingEnabled = true;
+            this.listBoxU3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxU3.Name = "listBoxU3";
+            this.listBoxU3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxU3.TabIndex = 8;
             // 
-            // listBox2
+            // listBoxU2
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(151, 96);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 7;
+            this.listBoxU2.FormattingEnabled = true;
+            this.listBoxU2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxU2.Name = "listBoxU2";
+            this.listBoxU2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxU2.TabIndex = 7;
             // 
-            // listBox1
+            // listBoxU1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(24, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 6;
+            this.listBoxU1.FormattingEnabled = true;
+            this.listBoxU1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxU1.Name = "listBoxU1";
+            this.listBoxU1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxU1.TabIndex = 6;
             // 
             // tabMonday
             // 
             this.tabMonday.Controls.Add(this.label4);
             this.tabMonday.Controls.Add(this.label5);
             this.tabMonday.Controls.Add(this.label6);
-            this.tabMonday.Controls.Add(this.listBox4);
-            this.tabMonday.Controls.Add(this.listBox5);
-            this.tabMonday.Controls.Add(this.listBox6);
+            this.tabMonday.Controls.Add(this.listBoxM3);
+            this.tabMonday.Controls.Add(this.listBoxM2);
+            this.tabMonday.Controls.Add(this.listBoxM1);
             this.tabMonday.Location = new System.Drawing.Point(4, 22);
             this.tabMonday.Name = "tabMonday";
             this.tabMonday.Padding = new System.Windows.Forms.Padding(3);
@@ -228,38 +220,38 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox4
+            // listBoxM3
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(278, 96);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(120, 95);
-            this.listBox4.TabIndex = 8;
+            this.listBoxM3.FormattingEnabled = true;
+            this.listBoxM3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxM3.Name = "listBoxM3";
+            this.listBoxM3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxM3.TabIndex = 8;
             // 
-            // listBox5
+            // listBoxM2
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(151, 96);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(120, 95);
-            this.listBox5.TabIndex = 7;
+            this.listBoxM2.FormattingEnabled = true;
+            this.listBoxM2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxM2.Name = "listBoxM2";
+            this.listBoxM2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxM2.TabIndex = 7;
             // 
-            // listBox6
+            // listBoxM1
             // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(24, 96);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(120, 95);
-            this.listBox6.TabIndex = 6;
+            this.listBoxM1.FormattingEnabled = true;
+            this.listBoxM1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxM1.Name = "listBoxM1";
+            this.listBoxM1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxM1.TabIndex = 6;
             // 
             // tabTuesday
             // 
             this.tabTuesday.Controls.Add(this.label7);
             this.tabTuesday.Controls.Add(this.label8);
             this.tabTuesday.Controls.Add(this.label9);
-            this.tabTuesday.Controls.Add(this.listBox7);
-            this.tabTuesday.Controls.Add(this.listBox8);
-            this.tabTuesday.Controls.Add(this.listBox9);
+            this.tabTuesday.Controls.Add(this.listBoxT3);
+            this.tabTuesday.Controls.Add(this.listBoxT2);
+            this.tabTuesday.Controls.Add(this.listBoxT1);
             this.tabTuesday.Location = new System.Drawing.Point(4, 22);
             this.tabTuesday.Name = "tabTuesday";
             this.tabTuesday.Size = new System.Drawing.Size(422, 266);
@@ -294,38 +286,39 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox7
+            // listBoxT3
             // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.Location = new System.Drawing.Point(278, 96);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(120, 95);
-            this.listBox7.TabIndex = 8;
+            this.listBoxT3.FormattingEnabled = true;
+            this.listBoxT3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxT3.Name = "listBoxT3";
+            this.listBoxT3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxT3.TabIndex = 8;
             // 
-            // listBox8
+            // listBoxT2
             // 
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.Location = new System.Drawing.Point(151, 96);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(120, 95);
-            this.listBox8.TabIndex = 7;
+            this.listBoxT2.FormattingEnabled = true;
+            this.listBoxT2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxT2.Name = "listBoxT2";
+            this.listBoxT2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBoxT2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxT2.TabIndex = 7;
             // 
-            // listBox9
+            // listBoxT1
             // 
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.Location = new System.Drawing.Point(24, 96);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(120, 95);
-            this.listBox9.TabIndex = 6;
+            this.listBoxT1.FormattingEnabled = true;
+            this.listBoxT1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxT1.Name = "listBoxT1";
+            this.listBoxT1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxT1.TabIndex = 6;
             // 
             // tabWednesday
             // 
             this.tabWednesday.Controls.Add(this.label10);
             this.tabWednesday.Controls.Add(this.label11);
             this.tabWednesday.Controls.Add(this.label12);
-            this.tabWednesday.Controls.Add(this.listBox10);
-            this.tabWednesday.Controls.Add(this.listBox11);
-            this.tabWednesday.Controls.Add(this.listBox12);
+            this.tabWednesday.Controls.Add(this.listBoxW3);
+            this.tabWednesday.Controls.Add(this.listBoxW2);
+            this.tabWednesday.Controls.Add(this.listBoxW1);
             this.tabWednesday.Location = new System.Drawing.Point(4, 22);
             this.tabWednesday.Name = "tabWednesday";
             this.tabWednesday.Size = new System.Drawing.Size(422, 266);
@@ -360,38 +353,38 @@
             this.label12.TabIndex = 9;
             this.label12.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox10
+            // listBoxW3
             // 
-            this.listBox10.FormattingEnabled = true;
-            this.listBox10.Location = new System.Drawing.Point(278, 96);
-            this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(120, 95);
-            this.listBox10.TabIndex = 8;
+            this.listBoxW3.FormattingEnabled = true;
+            this.listBoxW3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxW3.Name = "listBoxW3";
+            this.listBoxW3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxW3.TabIndex = 8;
             // 
-            // listBox11
+            // listBoxW2
             // 
-            this.listBox11.FormattingEnabled = true;
-            this.listBox11.Location = new System.Drawing.Point(151, 96);
-            this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(120, 95);
-            this.listBox11.TabIndex = 7;
+            this.listBoxW2.FormattingEnabled = true;
+            this.listBoxW2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxW2.Name = "listBoxW2";
+            this.listBoxW2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxW2.TabIndex = 7;
             // 
-            // listBox12
+            // listBoxW1
             // 
-            this.listBox12.FormattingEnabled = true;
-            this.listBox12.Location = new System.Drawing.Point(24, 96);
-            this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(120, 95);
-            this.listBox12.TabIndex = 6;
+            this.listBoxW1.FormattingEnabled = true;
+            this.listBoxW1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxW1.Name = "listBoxW1";
+            this.listBoxW1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxW1.TabIndex = 6;
             // 
             // tabThursday
             // 
             this.tabThursday.Controls.Add(this.label13);
             this.tabThursday.Controls.Add(this.label14);
             this.tabThursday.Controls.Add(this.label15);
-            this.tabThursday.Controls.Add(this.listBox13);
-            this.tabThursday.Controls.Add(this.listBox14);
-            this.tabThursday.Controls.Add(this.listBox15);
+            this.tabThursday.Controls.Add(this.listBoxR3);
+            this.tabThursday.Controls.Add(this.listBoxR2);
+            this.tabThursday.Controls.Add(this.listBoxR1);
             this.tabThursday.Location = new System.Drawing.Point(4, 22);
             this.tabThursday.Name = "tabThursday";
             this.tabThursday.Size = new System.Drawing.Size(422, 266);
@@ -426,38 +419,38 @@
             this.label15.TabIndex = 9;
             this.label15.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox13
+            // listBoxR3
             // 
-            this.listBox13.FormattingEnabled = true;
-            this.listBox13.Location = new System.Drawing.Point(278, 96);
-            this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(120, 95);
-            this.listBox13.TabIndex = 8;
+            this.listBoxR3.FormattingEnabled = true;
+            this.listBoxR3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxR3.Name = "listBoxR3";
+            this.listBoxR3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxR3.TabIndex = 8;
             // 
-            // listBox14
+            // listBoxR2
             // 
-            this.listBox14.FormattingEnabled = true;
-            this.listBox14.Location = new System.Drawing.Point(151, 96);
-            this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(120, 95);
-            this.listBox14.TabIndex = 7;
+            this.listBoxR2.FormattingEnabled = true;
+            this.listBoxR2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxR2.Name = "listBoxR2";
+            this.listBoxR2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxR2.TabIndex = 7;
             // 
-            // listBox15
+            // listBoxR1
             // 
-            this.listBox15.FormattingEnabled = true;
-            this.listBox15.Location = new System.Drawing.Point(24, 96);
-            this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(120, 95);
-            this.listBox15.TabIndex = 6;
+            this.listBoxR1.FormattingEnabled = true;
+            this.listBoxR1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxR1.Name = "listBoxR1";
+            this.listBoxR1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxR1.TabIndex = 6;
             // 
             // tabFriday
             // 
             this.tabFriday.Controls.Add(this.label16);
             this.tabFriday.Controls.Add(this.label17);
             this.tabFriday.Controls.Add(this.label18);
-            this.tabFriday.Controls.Add(this.listBox16);
-            this.tabFriday.Controls.Add(this.listBox17);
-            this.tabFriday.Controls.Add(this.listBox18);
+            this.tabFriday.Controls.Add(this.listBoxF3);
+            this.tabFriday.Controls.Add(this.listBoxF2);
+            this.tabFriday.Controls.Add(this.listBoxF1);
             this.tabFriday.Location = new System.Drawing.Point(4, 22);
             this.tabFriday.Name = "tabFriday";
             this.tabFriday.Size = new System.Drawing.Size(422, 266);
@@ -492,38 +485,38 @@
             this.label18.TabIndex = 9;
             this.label18.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox16
+            // listBoxF3
             // 
-            this.listBox16.FormattingEnabled = true;
-            this.listBox16.Location = new System.Drawing.Point(278, 96);
-            this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(120, 95);
-            this.listBox16.TabIndex = 8;
+            this.listBoxF3.FormattingEnabled = true;
+            this.listBoxF3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxF3.Name = "listBoxF3";
+            this.listBoxF3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxF3.TabIndex = 8;
             // 
-            // listBox17
+            // listBoxF2
             // 
-            this.listBox17.FormattingEnabled = true;
-            this.listBox17.Location = new System.Drawing.Point(151, 96);
-            this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(120, 95);
-            this.listBox17.TabIndex = 7;
+            this.listBoxF2.FormattingEnabled = true;
+            this.listBoxF2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxF2.Name = "listBoxF2";
+            this.listBoxF2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxF2.TabIndex = 7;
             // 
-            // listBox18
+            // listBoxF1
             // 
-            this.listBox18.FormattingEnabled = true;
-            this.listBox18.Location = new System.Drawing.Point(24, 96);
-            this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(120, 95);
-            this.listBox18.TabIndex = 6;
+            this.listBoxF1.FormattingEnabled = true;
+            this.listBoxF1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxF1.Name = "listBoxF1";
+            this.listBoxF1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxF1.TabIndex = 6;
             // 
             // tabSaturday
             // 
             this.tabSaturday.Controls.Add(this.label19);
             this.tabSaturday.Controls.Add(this.label20);
             this.tabSaturday.Controls.Add(this.label21);
-            this.tabSaturday.Controls.Add(this.listBox19);
-            this.tabSaturday.Controls.Add(this.listBox20);
-            this.tabSaturday.Controls.Add(this.listBox21);
+            this.tabSaturday.Controls.Add(this.listBoxS3);
+            this.tabSaturday.Controls.Add(this.listBoxS2);
+            this.tabSaturday.Controls.Add(this.listBoxS1);
             this.tabSaturday.Location = new System.Drawing.Point(4, 22);
             this.tabSaturday.Name = "tabSaturday";
             this.tabSaturday.Size = new System.Drawing.Size(422, 266);
@@ -558,96 +551,29 @@
             this.label21.TabIndex = 9;
             this.label21.Text = "1st Shift (8am - 4pm)";
             // 
-            // listBox19
+            // listBoxS3
             // 
-            this.listBox19.FormattingEnabled = true;
-            this.listBox19.Location = new System.Drawing.Point(278, 96);
-            this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(120, 95);
-            this.listBox19.TabIndex = 8;
+            this.listBoxS3.FormattingEnabled = true;
+            this.listBoxS3.Location = new System.Drawing.Point(278, 96);
+            this.listBoxS3.Name = "listBoxS3";
+            this.listBoxS3.Size = new System.Drawing.Size(120, 95);
+            this.listBoxS3.TabIndex = 8;
             // 
-            // listBox20
+            // listBoxS2
             // 
-            this.listBox20.FormattingEnabled = true;
-            this.listBox20.Location = new System.Drawing.Point(151, 96);
-            this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(120, 95);
-            this.listBox20.TabIndex = 7;
+            this.listBoxS2.FormattingEnabled = true;
+            this.listBoxS2.Location = new System.Drawing.Point(151, 96);
+            this.listBoxS2.Name = "listBoxS2";
+            this.listBoxS2.Size = new System.Drawing.Size(120, 95);
+            this.listBoxS2.TabIndex = 7;
             // 
-            // listBox21
+            // listBoxS1
             // 
-            this.listBox21.FormattingEnabled = true;
-            this.listBox21.Location = new System.Drawing.Point(24, 96);
-            this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(120, 95);
-            this.listBox21.TabIndex = 6;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.label22);
-            this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.listBox22);
-            this.tabPage1.Controls.Add(this.listBox23);
-            this.tabPage1.Controls.Add(this.listBox24);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(422, 266);
-            this.tabPage1.TabIndex = 7;
-            this.tabPage1.Text = "Sunday";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(278, 75);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 13);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "3rd Shift (12am - 8am)";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(151, 76);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(113, 13);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "2nd Shift (4pm - 12am)";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(24, 77);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(103, 13);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "1st Shift (8am - 4pm)";
-            // 
-            // listBox22
-            // 
-            this.listBox22.FormattingEnabled = true;
-            this.listBox22.Location = new System.Drawing.Point(278, 96);
-            this.listBox22.Name = "listBox22";
-            this.listBox22.Size = new System.Drawing.Size(120, 95);
-            this.listBox22.TabIndex = 8;
-            // 
-            // listBox23
-            // 
-            this.listBox23.FormattingEnabled = true;
-            this.listBox23.Location = new System.Drawing.Point(151, 96);
-            this.listBox23.Name = "listBox23";
-            this.listBox23.Size = new System.Drawing.Size(120, 95);
-            this.listBox23.TabIndex = 7;
-            // 
-            // listBox24
-            // 
-            this.listBox24.FormattingEnabled = true;
-            this.listBox24.Location = new System.Drawing.Point(24, 96);
-            this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(120, 95);
-            this.listBox24.TabIndex = 6;
+            this.listBoxS1.FormattingEnabled = true;
+            this.listBoxS1.Location = new System.Drawing.Point(24, 96);
+            this.listBoxS1.Name = "listBoxS1";
+            this.listBoxS1.Size = new System.Drawing.Size(120, 95);
+            this.listBoxS1.TabIndex = 6;
             // 
             // btnAddDealer
             // 
@@ -657,6 +583,7 @@
             this.btnAddDealer.TabIndex = 12;
             this.btnAddDealer.Text = "Add Dealer";
             this.btnAddDealer.UseVisualStyleBackColor = true;
+            this.btnAddDealer.Click += new System.EventHandler(this.btnAddDealer_Click);
             // 
             // cboDealerSelect
             // 
@@ -675,6 +602,7 @@
             this.btnRemoveDealer.TabIndex = 14;
             this.btnRemoveDealer.Text = "Remove Dealer";
             this.btnRemoveDealer.UseVisualStyleBackColor = true;
+            this.btnRemoveDealer.Click += new System.EventHandler(this.btnRemoveDealer_Click);
             // 
             // btnReturn
             // 
@@ -688,6 +616,7 @@
             // 
             // pnlManageDealers
             // 
+            this.pnlManageDealers.Controls.Add(this.comboBox1);
             this.pnlManageDealers.Controls.Add(this.btnAddDealer);
             this.pnlManageDealers.Controls.Add(this.cboDealerSelect);
             this.pnlManageDealers.Controls.Add(this.btnRemoveDealer);
@@ -696,6 +625,37 @@
             this.pnlManageDealers.Size = new System.Drawing.Size(266, 100);
             this.pnlManageDealers.TabIndex = 16;
             this.pnlManageDealers.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sunday 1st Shift",
+            "Sunday 2nd Shift",
+            "Sunday 3rd Shift",
+            "Monday 1st Shift",
+            "Monday 2nd Shift",
+            "Monday 3rd Shift",
+            "Tuesday 1st Shift",
+            "Tuesday 2nd Shift",
+            "Tuesday 3rd Shift",
+            "Wednesday 1st Shift",
+            "Wednesday 2nd Shift",
+            "Wednesday 3rd Shift",
+            "Thursday 1st Shift",
+            "Thursday 2nd Shift",
+            "Thursday 3rd Shift",
+            "Friday 1st Shift",
+            "Friday 2nd Shift",
+            "Friday 3rd Shift",
+            "Saturday 1st Shift",
+            "Saturday 2nd Shift",
+            "Saturday 3rd Shift"});
+            this.comboBox1.Location = new System.Drawing.Point(115, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 15;
             // 
             // SchedulePage
             // 
@@ -723,8 +683,6 @@
             this.tabFriday.PerformLayout();
             this.tabSaturday.ResumeLayout(false);
             this.tabSaturday.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.pnlManageDealers.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -740,59 +698,53 @@
         private System.Windows.Forms.TabPage tabThursday;
         private System.Windows.Forms.TabPage tabFriday;
         private System.Windows.Forms.TabPage tabSaturday;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxU3;
+        private System.Windows.Forms.ListBox listBoxU2;
+        private System.Windows.Forms.ListBox listBoxU1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBoxM3;
+        private System.Windows.Forms.ListBox listBoxM2;
+        private System.Windows.Forms.ListBox listBoxM1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox listBox7;
-        private System.Windows.Forms.ListBox listBox8;
-        private System.Windows.Forms.ListBox listBox9;
+        private System.Windows.Forms.ListBox listBoxT3;
+        private System.Windows.Forms.ListBox listBoxT2;
+        private System.Windows.Forms.ListBox listBoxT1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListBox listBox10;
-        private System.Windows.Forms.ListBox listBox11;
-        private System.Windows.Forms.ListBox listBox12;
+        private System.Windows.Forms.ListBox listBoxW3;
+        private System.Windows.Forms.ListBox listBoxW2;
+        private System.Windows.Forms.ListBox listBoxW1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox listBox13;
-        private System.Windows.Forms.ListBox listBox14;
-        private System.Windows.Forms.ListBox listBox15;
+        private System.Windows.Forms.ListBox listBoxR3;
+        private System.Windows.Forms.ListBox listBoxR2;
+        private System.Windows.Forms.ListBox listBoxR1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ListBox listBox16;
-        private System.Windows.Forms.ListBox listBox17;
-        private System.Windows.Forms.ListBox listBox18;
+        private System.Windows.Forms.ListBox listBoxF3;
+        private System.Windows.Forms.ListBox listBoxF2;
+        private System.Windows.Forms.ListBox listBoxF1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ListBox listBox19;
-        private System.Windows.Forms.ListBox listBox20;
-        private System.Windows.Forms.ListBox listBox21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ListBox listBox22;
-        private System.Windows.Forms.ListBox listBox23;
-        private System.Windows.Forms.ListBox listBox24;
+        private System.Windows.Forms.ListBox listBoxS3;
+        private System.Windows.Forms.ListBox listBoxS2;
+        private System.Windows.Forms.ListBox listBoxS1;
         private System.Windows.Forms.Button btnAddDealer;
         private System.Windows.Forms.ComboBox cboDealerSelect;
         private System.Windows.Forms.Button btnRemoveDealer;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel pnlManageDealers;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
