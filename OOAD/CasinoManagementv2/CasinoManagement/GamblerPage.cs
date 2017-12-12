@@ -74,8 +74,8 @@ namespace CasinoManagement
 
         private void GamblerPage_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
             ret.Show();
+            this.Hide();
         }
     }
 }

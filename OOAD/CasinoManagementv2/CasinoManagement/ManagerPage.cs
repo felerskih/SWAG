@@ -66,9 +66,10 @@ namespace CasinoManagement
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            CasinoManagement.LoginPage log = new LoginPage();
+            //CasinoManagement.LoginPage log = new LoginPage();
             this.Close();
-            log.Show();
+            ret.Show();
+            //log.Show();
         }
     }
 }

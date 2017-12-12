@@ -54,6 +54,7 @@ namespace CasinoManagement
                         line = str.ReadLine();
                     }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -88,6 +89,8 @@ namespace CasinoManagement
                     }
                 }
             }
+            txtPassword.Clear();
+            txtUsername.Clear();
             if (validName == false)
                 MessageBox.Show("Username or Password is incorrect.");
         }
@@ -160,7 +163,7 @@ namespace CasinoManagement
                     while ((lines[numLines] = sr.ReadLine()) != null)
                         numLines++;
                 }
-                using (StreamWriter sw = new StreamWriter("users.txt"))
+                /*using (StreamWriter sw = new StreamWriter("users.txt"))
                 {
                     for(int i = 0; i < numLines-1; i++)
                     {
@@ -171,7 +174,7 @@ namespace CasinoManagement
                             lines[i] = users[i].getName() + " " + users[i].getPass() + " " + users[i].getType() + " " + g.GetFunds();
                         }
                     }
-                }
+                }*/
             }
             catch(Exception ex)
             {
