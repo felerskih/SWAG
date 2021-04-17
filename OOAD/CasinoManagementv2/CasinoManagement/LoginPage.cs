@@ -94,50 +94,6 @@ namespace CasinoManagement
             if (validName == false)
                 MessageBox.Show("Username or Password is incorrect.");
         }
-            /*
-            string line;
-            string[] values;
-            try
-            {
-                using (StreamReader str = new StreamReader("users.txt"))
-                {
-                    line = str.ReadLine();
-                    values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
-                    while (line != null && values[0] != txtUsername.Text)
-                    {
-                        values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
-                        line = str.ReadLine();            
-                    }
-                    if (values[0] == txtUsername.Text && values[1] == txtPassword.Text)
-                    {
-                        //go to new form and make new user
-                        this.Hide();
-                        if (values[2] == "0")
-                        {
-                            pageGambler = new GamblerPage(this, values[0], values[1], values[3]);
-                            pageGambler.Show();
-                        }                          
-                        if (values[2] == "1")
-                        {
-                            pageDealer = new DealerPage(this, values[0], values[1]);
-                            pageDealer.Show();
-                        }     
-                        if (values[2] == "2")
-                        {
-                            pageManager = new ManagerPage(this, values[0], values[1]);
-                            pageManager.Show();
-                        }                        
-                    }
-                    else
-                        MessageBox.Show("Username or Password is incorrect.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("You fucked up Henry " + ex);
-            }
-            */
-
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -153,28 +109,16 @@ namespace CasinoManagement
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string[] lines = new string[100];
-            int numLines = 0;
-            string[] values;
             try
             {
-                using (StreamReader sr = new StreamReader("users.txt"))
+                
+                using (StreamWriter sw = new StreamWriter("users.txt"))
                 {
-                    while ((lines[numLines] = sr.ReadLine()) != null)
-                        numLines++;
-                }
-                /*using (StreamWriter sw = new StreamWriter("users.txt"))
-                {
-                    for(int i = 0; i < numLines-1; i++)
+                    for(int i = 0; i < accountCount; i++)
                     {
-                        //values = lines[i].Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
-                        if (users[i].getType() == 0)
-                        {
-                            Gambler g = (Gambler)users[i];
-                            lines[i] = users[i].getName() + " " + users[i].getPass() + " " + users[i].getType() + " " + g.GetFunds();
-                        }
+                        sw.Write(users[i].toString() + "\n");
                     }
-                }*/
+                }
             }
             catch(Exception ex)
             {

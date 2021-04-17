@@ -38,5 +38,10 @@ namespace CasinoManagement
         {
             return accountType;
         }
+
+        public virtual string toString() 
+        { 
+            return username + " " + password + " " + accountType; 
+        }
     }
 }

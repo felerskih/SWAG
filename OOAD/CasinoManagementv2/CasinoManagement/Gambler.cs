@@ -40,5 +40,10 @@ namespace CasinoManagement
         {
             return base.username + base.password;
         }
+
+        public override string toString()
+        {
+            return base.toString() + " " + funds;
+        }
     }
 }
