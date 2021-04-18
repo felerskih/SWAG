@@ -13,6 +13,9 @@ namespace CasinoManagement
     public partial class RegisterUserPage : Form
     {
         Form ret;
+        LoginPage log;
+        bool fromManager;
+
         public RegisterUserPage()
         {
             InitializeComponent();
@@ -26,14 +29,13 @@ namespace CasinoManagement
             {
                 pnlManageRegis.Visible = true;
                 pnlGamblerRegis.Visible = false;
+                ManagerPage man = (ManagerPage)ret;
+                log = man.ret;
             }
+            else
+                log = (LoginPage)frm;
+            fromManager = isManager;
             ret = frm;
-        }
-
-
-        private void RegisterUserPage_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -52,6 +54,28 @@ namespace CasinoManagement
         private void lblValid_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            bool valid = true;
+            
+            for (int i = 0; i < log.accountCount; i++)
+            {
+                if (log.users[i].getName() == txtBoxName.Text)
+                    valid = false;
+            }
+
+            if (txtBoxName.Text == "" || !valid)
+                MessageBox.Show("Error!", "Please enter a valid username!");
+            else if (txtBoxPass.Text == "")
+                MessageBox.Show("Error!", "Please enter a valid password!");
+            else
+            {
+                log.users[log.accountCount++] = new Gambler(txtBoxName.Text, txtBoxPass.Text, 0, 0.0);
+                ret.Show();
+                this.Close();
+            }
         }
     }
 }

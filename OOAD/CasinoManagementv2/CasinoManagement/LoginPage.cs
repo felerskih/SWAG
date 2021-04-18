@@ -97,6 +97,7 @@ namespace CasinoManagement
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            regUser = new RegisterUserPage(this, false);
             this.Hide();
             regUser.Show();
         }

@@ -9,24 +9,27 @@ namespace CasinoManagement
     class Gambler : User
     {
         public List<string> gamblerList = new List<string>();
-        private float funds = 0.0f;
+        private double funds = 0.0f;
 
-        public Gambler(string u, string p, int t, float f) : base(u, p, t)
+        public Gambler(string u, string p, int t, double f) : base(u, p, t)
         {
             funds = f;
+            funds = Math.Round(funds, 2);
         }
 
-        public void AddFunds(float f)
+        public void AddFunds(double f)
         {
             funds += f;
+            funds = Math.Round(funds, 2);
         }
 
-        public void RemoveFunds(float f)
+        public void RemoveFunds(double f)
         {
             funds -= f;
+            funds = Math.Round(funds, 2);
         }
 
-        public float GetFunds()
+        public double GetFunds()
         {
             return funds;
         }

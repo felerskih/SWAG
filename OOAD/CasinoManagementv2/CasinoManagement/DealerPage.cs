@@ -25,6 +25,11 @@ namespace CasinoManagement
             message = new CasinoManagement.MessagePage(this, d);
             schedule = new CasinoManagement.SchedulePage(this, false);
             InitializeComponent();
+            for (int i = 0; i < ret.accountCount; i++)
+            {
+                if (ret.users[i].getType() == 0)
+                    listBoxGamblers.Items.Add(ret.users[i].getName());
+            }
         }
         
         public DealerPage()
@@ -34,10 +39,8 @@ namespace CasinoManagement
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //CasinoManagement.LoginPage log = new LoginPage();
             this.Close();
             ret.Show();
-            //log.Show();
         }
 
         private void btnViewMessages_Click(object sender, EventArgs e)
@@ -61,15 +64,17 @@ namespace CasinoManagement
         {
             try
             {
-                float a = float.Parse(txtGiveFunds.Text);
+                double a = double.Parse(txtGiveFunds.Text);
                 bool validGambler = false;
                 for (int i = 0; i < ret.accountCount; i++)
                 {
-                    if (ret.users[i].getName() == txtGamblerName.Text)
+                    if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
                     {
+                        a = Math.Round(a);
                         validGambler = true;
                         Gambler g = (Gambler)ret.users[i];
                         g.AddFunds(a);
+                        lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
                     }
                 }
                 if (!validGambler)
@@ -81,24 +86,21 @@ namespace CasinoManagement
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConfirmTake_Click(object sender, EventArgs e)
         {
             try
             {
-                float a = float.Parse(txtRemoveFunds.Text);
+                double a = double.Parse(txtRemoveFunds.Text);
                 bool validGambler = false;
                 for (int i = 0; i < ret.accountCount; i++)
                 {
-                    if (ret.users[i].getName() == txtGamblerName.Text)
+                    if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
                     {
+                        a = Math.Round(a);
                         validGambler = true;
                         Gambler g = (Gambler)ret.users[i];
                         g.RemoveFunds(a);
+                        lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
                     }
                 }
                 if (!validGambler)
@@ -120,6 +122,22 @@ namespace CasinoManagement
         {
             ret.Show();
             this.Hide();
+        }
+
+        private void listBoxGamblers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool valid = false;
+            for (int i = 0; i < ret.accountCount; i++)
+            {
+                if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
+                {
+                    valid = true;
+                    Gambler g = (Gambler)ret.users[i];
+                    lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
+                }
+            }
+            if (!valid)
+                lblFunds.Text = "$0.00";
         }
     }
 }

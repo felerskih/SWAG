@@ -13,13 +13,19 @@ namespace CasinoManagement
     public partial class ManagerPage : Form
     {
         Manager m;
-        Form ret;
+        public LoginPage ret;
         Form message, schedule, regis;
         public ManagerPage(Form frm, User usr)
         {
             m = (Manager)usr;
-            ret = frm;
+            ret = (LoginPage)frm;
             InitializeComponent();
+
+            for (int i = 0; i < ret.accountCount; i++)
+            {
+                if (ret.users[i].getType() == 0)
+                    listBoxGamblers.Items.Add(ret.users[i].getName());
+            }
         }
         public ManagerPage()
         {

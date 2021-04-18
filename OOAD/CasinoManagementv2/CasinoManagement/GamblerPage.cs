@@ -19,7 +19,7 @@ namespace CasinoManagement
         {
             g = (Gambler)usr;
             InitializeComponent();
-            lblFunds.Text = g.GetFunds().ToString();
+            lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
             ret = frm;
         }
 
@@ -37,9 +37,10 @@ namespace CasinoManagement
         {
             try
             {
-                float a = float.Parse(txtAddFunds.Text);
+                double a = double.Parse(txtAddFunds.Text);
+                a = Math.Round(a, 2);
                 g.AddFunds(a);
-                lblFunds.Text = g.GetFunds().ToString();
+                lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
             }
             catch
             {
@@ -52,11 +53,12 @@ namespace CasinoManagement
         {
             try
             {
-                float a = float.Parse(txtRemoveFunds.Text);
+                double a = float.Parse(txtRemoveFunds.Text);
+                a = Math.Round(a, 2);
                 if (a <= g.GetFunds())
                 {
                     g.RemoveFunds(a);
-                    lblFunds.Text = g.GetFunds().ToString();
+                    lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
                 }
             }
             catch
