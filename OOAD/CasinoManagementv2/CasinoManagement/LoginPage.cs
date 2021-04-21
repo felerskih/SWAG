@@ -38,7 +38,7 @@ namespace CasinoManagement
                         values = line.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
                         if (values[2] == "0")
                         {
-                            users[accountCount] = new Gambler(values[0], values[1], 0, float.Parse(values[3]));
+                            users[accountCount] = new Gambler(values[0], values[1], 0, double.Parse(values[3]), bool.Parse(values[4]));
                             accountCount++;
                         }
                         else if (values[2] == "1")

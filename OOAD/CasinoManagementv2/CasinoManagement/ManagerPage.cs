@@ -24,7 +24,11 @@ namespace CasinoManagement
             for (int i = 0; i < ret.accountCount; i++)
             {
                 if (ret.users[i].getType() == 0)
-                    listBoxGamblers.Items.Add(ret.users[i].getName());
+                {
+                    Gambler g = (Gambler)ret.users[i];
+                    if (g.GetFlag() == true)
+                        listBoxGamblers.Items.Add(ret.users[i].getName());
+                }
             }
         }
         public ManagerPage()
@@ -53,8 +57,17 @@ namespace CasinoManagement
 
         private void btnUnflag_Click(object sender, EventArgs e)
         {
-            //Gambler g;
-            //g.gamblerList.Remove(listBoxGamblers.SelectedIndex.ToString());
+            for (int i = 0; i < ret.accountCount; i++)
+            {
+                if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
+                {
+                    Gambler g = (Gambler)ret.users[i];
+                    g.ToggleFlag();
+
+                    listBoxGamblers.Items.Remove(listBoxGamblers.SelectedItem);
+                    break;
+                }
+            }
         }
 
         private void ManagerPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -72,10 +85,8 @@ namespace CasinoManagement
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //CasinoManagement.LoginPage log = new LoginPage();
             this.Close();
             ret.Show();
-            //log.Show();
         }
     }
 }

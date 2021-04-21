@@ -77,7 +77,7 @@
             // txtBoxName
             // 
             this.txtBoxName.Location = new System.Drawing.Point(179, 107);
-            this.txtBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(132, 22);
             this.txtBoxName.TabIndex = 4;
@@ -85,7 +85,7 @@
             // txtBoxPass
             // 
             this.txtBoxPass.Location = new System.Drawing.Point(179, 140);
-            this.txtBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxPass.Name = "txtBoxPass";
             this.txtBoxPass.PasswordChar = '*';
             this.txtBoxPass.Size = new System.Drawing.Size(132, 22);
@@ -94,7 +94,7 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(87, 187);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(141, 28);
             this.btnRegister.TabIndex = 6;
@@ -105,7 +105,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(4, 15);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 7;
@@ -119,7 +119,7 @@
             this.pnlManageRegis.Controls.Add(this.btnRegisManager);
             this.pnlManageRegis.Controls.Add(this.btnRegisDealer);
             this.pnlManageRegis.Location = new System.Drawing.Point(16, 223);
-            this.pnlManageRegis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlManageRegis.Margin = new System.Windows.Forms.Padding(4);
             this.pnlManageRegis.Name = "pnlManageRegis";
             this.pnlManageRegis.Size = new System.Drawing.Size(364, 91);
             this.pnlManageRegis.TabIndex = 8;
@@ -128,7 +128,7 @@
             // btnReturn
             // 
             this.btnReturn.Location = new System.Drawing.Point(248, 39);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(100, 28);
             this.btnReturn.TabIndex = 2;
@@ -139,28 +139,30 @@
             // btnRegisManager
             // 
             this.btnRegisManager.Location = new System.Drawing.Point(71, 39);
-            this.btnRegisManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegisManager.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegisManager.Name = "btnRegisManager";
             this.btnRegisManager.Size = new System.Drawing.Size(137, 28);
             this.btnRegisManager.TabIndex = 1;
             this.btnRegisManager.Text = "Register Manager";
             this.btnRegisManager.UseVisualStyleBackColor = true;
+            this.btnRegisManager.Click += new System.EventHandler(this.btnRegisManager_Click);
             // 
             // btnRegisDealer
             // 
             this.btnRegisDealer.Location = new System.Drawing.Point(71, 4);
-            this.btnRegisDealer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegisDealer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegisDealer.Name = "btnRegisDealer";
             this.btnRegisDealer.Size = new System.Drawing.Size(123, 28);
             this.btnRegisDealer.TabIndex = 0;
             this.btnRegisDealer.Text = "Register Dealer";
             this.btnRegisDealer.UseVisualStyleBackColor = true;
+            this.btnRegisDealer.Click += new System.EventHandler(this.btnRegisDealer_Click);
             // 
             // pnlGamblerRegis
             // 
             this.pnlGamblerRegis.Controls.Add(this.btnCancel);
             this.pnlGamblerRegis.Location = new System.Drawing.Point(260, 172);
-            this.pnlGamblerRegis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlGamblerRegis.Margin = new System.Windows.Forms.Padding(4);
             this.pnlGamblerRegis.Name = "pnlGamblerRegis";
             this.pnlGamblerRegis.Size = new System.Drawing.Size(120, 55);
             this.pnlGamblerRegis.TabIndex = 9;
@@ -178,7 +180,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterUserPage";
             this.Text = "RegisterUserPage";
             this.pnlManageRegis.ResumeLayout(false);

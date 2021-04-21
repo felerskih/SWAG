@@ -1,4 +1,6 @@
 sully pass 2
 andrew pass 1
-henry pass 0 233.42
-user user 0 0
+henry pass 0 0 False
+user user 0 0 True
+dealer pass 1
+manager pass 2

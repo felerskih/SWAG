@@ -29,7 +29,7 @@ namespace CasinoManagement
             {
                 pnlManageRegis.Visible = true;
                 pnlGamblerRegis.Visible = false;
-                ManagerPage man = (ManagerPage)ret;
+                ManagerPage man = (ManagerPage)frm;
                 log = man.ret;
             }
             else
@@ -58,13 +58,7 @@ namespace CasinoManagement
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            bool valid = true;
-            
-            for (int i = 0; i < log.accountCount; i++)
-            {
-                if (log.users[i].getName() == txtBoxName.Text)
-                    valid = false;
-            }
+            bool valid = UserIsValid();
 
             if (txtBoxName.Text == "" || !valid)
                 MessageBox.Show("Error!", "Please enter a valid username!");
@@ -72,10 +66,55 @@ namespace CasinoManagement
                 MessageBox.Show("Error!", "Please enter a valid password!");
             else
             {
-                log.users[log.accountCount++] = new Gambler(txtBoxName.Text, txtBoxPass.Text, 0, 0.0);
+                log.users[log.accountCount++] = new Gambler(txtBoxName.Text, txtBoxPass.Text, 0);
                 ret.Show();
                 this.Close();
             }
+        }
+
+        //Assume user is a Manager. Poses potential issue if attacker escalates privileges.
+        private void btnRegisDealer_Click(object sender, EventArgs e)
+        {
+            bool valid = UserIsValid();
+
+            if (txtBoxName.Text == "" || !valid)
+                MessageBox.Show("Error!", "Please enter a valid username!");
+            else if (txtBoxPass.Text == "")
+                MessageBox.Show("Error!", "Please enter a valid password!");
+            else
+            {
+                log.users[log.accountCount++] = new Dealer(txtBoxName.Text, txtBoxPass.Text, 1);
+                ret.Show();
+                this.Close();
+            }
+        }
+
+        private void btnRegisManager_Click(object sender, EventArgs e)
+        {
+            bool valid = UserIsValid();
+
+            if (txtBoxName.Text == "" || !valid)
+                MessageBox.Show("Error!", "Please enter a valid username!");
+            else if (txtBoxPass.Text == "")
+                MessageBox.Show("Error!", "Please enter a valid password!");
+            else
+            {
+                log.users[log.accountCount++] = new Manager(txtBoxName.Text, txtBoxPass.Text, 2);
+                ret.Show();
+                this.Close();
+            }
+        }
+
+        private bool UserIsValid()
+        {
+            bool valid = true;
+
+            for (int i = 0; i < log.accountCount; i++)
+            {
+                if (log.users[i].getName() == txtBoxName.Text)
+                    valid = false;
+            }
+            return valid;
         }
     }
 }

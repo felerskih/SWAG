@@ -28,7 +28,11 @@ namespace CasinoManagement
             for (int i = 0; i < ret.accountCount; i++)
             {
                 if (ret.users[i].getType() == 0)
-                    listBoxGamblers.Items.Add(ret.users[i].getName());
+                {
+                    Gambler g = (Gambler)ret.users[i];
+                    if (g.GetFlag() == false) //Only show unflagged gamblers
+                        listBoxGamblers.Items.Add(ret.users[i].getName());
+                }
             }
         }
         
@@ -114,8 +118,17 @@ namespace CasinoManagement
 
         private void btnFlag_Click(object sender, EventArgs e)
         {
-            //Gambler g;
-            //g.gamblerList.Add(listBoxGamblers.SelectedIndex.ToString());
+            for (int i = 0; i < ret.accountCount; i++)
+            {
+                if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
+                {
+                    Gambler g = (Gambler)ret.users[i];
+                    g.ToggleFlag();
+
+                    listBoxGamblers.Items.Remove(listBoxGamblers.SelectedItem);
+                    break;
+                }
+            }
         }
 
         private void DealerPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -127,13 +140,16 @@ namespace CasinoManagement
         private void listBoxGamblers_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool valid = false;
-            for (int i = 0; i < ret.accountCount; i++)
+            if (listBoxGamblers.Items.Count > 0)
             {
-                if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
+                for (int i = 0; i < ret.accountCount; i++)
                 {
-                    valid = true;
-                    Gambler g = (Gambler)ret.users[i];
-                    lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
+                    if (ret.users[i].getName() == listBoxGamblers.SelectedItem.ToString())
+                    {
+                        valid = true;
+                        Gambler g = (Gambler)ret.users[i];
+                        lblFunds.Text = string.Format("{0:C2}", g.GetFunds());
+                    }
                 }
             }
             if (!valid)

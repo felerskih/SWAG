@@ -10,11 +10,19 @@ namespace CasinoManagement
     {
         public List<string> gamblerList = new List<string>();
         private double funds = 0.0f;
+        private bool flag;
 
-        public Gambler(string u, string p, int t, double f) : base(u, p, t)
+        public Gambler(string u, string p, int t, double f, bool fl) : base(u, p, t)
         {
             funds = f;
             funds = Math.Round(funds, 2);
+            flag = fl;
+        }
+
+        public Gambler(string u, string p, int t) : base(u, p, t)
+        {
+            funds = 0;
+            flag = false;
         }
 
         public void AddFunds(double f)
@@ -34,19 +42,20 @@ namespace CasinoManagement
             return funds;
         }
 
-        public string getName()
-        {
-            return base.username;
-        }
-        
-        public string print()
-        {
-            return base.username + base.password;
-        }
-
         public override string toString()
         {
-            return base.toString() + " " + funds;
+            return base.toString() + " " + funds + " " + flag.ToString();
+        }
+
+        public bool GetFlag()
+        {
+            return flag;
+        }
+
+        public bool ToggleFlag()
+        {
+            flag = !flag;
+            return flag;
         }
     }
 }
